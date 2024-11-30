@@ -1,0 +1,33 @@
+body {
+    background-color: black;
+    color: white;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+header h1 {
+    display: flex;
+    justify-content: center;
+}
+
+header img {
+    display: block;
+    margin: auto;
+    width: 80%;
+    height:auto;
+  }
+
+main h2 {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+main p {
+    margin-bottom: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
