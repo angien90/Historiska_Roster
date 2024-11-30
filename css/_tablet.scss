@@ -1,0 +1,40 @@
+header img {
+    width: 10%;
+}
+
+a {
+    font-size: 1.5em;
+}
+
+section {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+main h2 {
+    margin-top: 90px;
+}
+
+article {
+    width:25%;
+    height: 610px;
+
+}
+
+article h3 {
+    font-size: 2.5em;
+}
+
+article img {
+    max-height: 300px; 
+    object-fit:cover;
+    object-position: top;
+}
+
+article h4 {
+    font-size: 1.5em;
+}

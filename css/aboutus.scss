@@ -1,0 +1,11 @@
+@import 'reset';
+
+@import 'mobileaboutus';
+
+@media screen and (min-width:1026px) {
+    @import 'tabletaboutus';
+}
+
+@media screen and (min-width:1366px) {
+    @import 'desktopaboutus';
+}
