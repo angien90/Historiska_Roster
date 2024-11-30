@@ -1,2 +1,2 @@
-# Historiska_R-ster
+# Historiska Röster
 Our research teams website
