@@ -3,38 +3,45 @@ body {
     color: white;
 }
 
-.rubrik {
+header {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
-    text-align: center; 
-    border-radius: 15px;
 }
 
-.logga {
-    height: 110px;
-    width: 100px;
-    position: absolute;
-    right: 10px;
-    top: 10px;
+header img {
+    display: flex;
+    justify-content: center;
+    width: 40%;;
+    display: block;
+    margin: auto;
 }
 
-nav {
+header h1 {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+}
+
+header nav {
     display: flex;
     justify-content: space-evenly;
 }
 
-hr {
+header hr {
     line-break: normal;
     color: white;
     width: 90%;
 }
 
-.link {
-    color: white;
-    text-decoration: none;
+main {
+    
 }
-
 .bild {
     display: flex;
     height: 50%;
