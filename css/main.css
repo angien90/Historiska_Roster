@@ -1,0 +1,75 @@
+body {
+    background-color: black;
+    color: white;
+}
+
+.rubrik {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center; 
+    border-radius: 15px;
+}
+
+.logga {
+    height: 110px;
+    width: 100px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+hr {
+    line-break: normal;
+    color: white;
+    width: 90%;
+}
+
+.link {
+    color: white;
+    text-decoration: none;
+}
+
+.bild {
+    display: flex;
+    height: 50%;
+    width: 50%;
+}
+
+section {
+    border-radius: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+
+
+}
+
+article {
+    width: 40%;
+    height: 200px;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+    flex-wrap: wrap;
+}
+
+
+@media screen and (min-width: 1000px) {
+    .logga {
+        height: 150px;
+        width: 150px; 
+}
+}
