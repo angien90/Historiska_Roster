@@ -9,6 +9,13 @@ header {
     justify-content: center;
 }
 
+header h1 {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+    font-size: 3em;
+}
+
 header img {
     display: flex;
     justify-content: center;
@@ -17,22 +24,58 @@ header img {
     margin: auto;
 }
 
-header h1 {
-    display: flex;
-    justify-content: center;
-    margin-top: 5px;
-    font-size: 3em;
-}
-
-a {
-    text-decoration: none;
-    color: white;
-    font-size: 1.2em;
-}
-
-header nav {
+nav {
+    width: 100%;
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
+    
+}
+
+nav ul {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    padding: 0px;
+}
+
+.link {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem; 
+    padding: 0.5rem 1rem;
+    position: relative;
+}
+
+.link::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: white;
+    z-index: -1;
+}
+
+.link:hover::before {
+    animation: fill 1s forwards;
+}
+
+@keyframes fill {
+    0% {
+        width: 0%;
+    }
+    50% {
+        width:100%;
+        height: 2px;
+    }
+    100% {
+        width: 100%;
+        height: 100%;
+        background: hsl(0, 100%, 100%, 0.2);
+        border-radius: 5px;
+    }
 }
 
 header hr {
@@ -46,23 +89,30 @@ main h2 {
     text-align: center;
     font-size: 3em;
     margin-bottom: 5px;
-    margin-top: 40px;
+    margin-top: 50px;
+    padding-left: 0px;
+}
+
+main p{
+    text-align: center;
 }
 
 section {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    text-align: center;
+    align-content: center;
     gap: 10px;
     width: 100%;
-    align-items: center;
 }
 
-article {
+.upcoming {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: flex-start;
-    width: 70%;
+    width: 50%;
     height: auto;
     border: 3px solid white;
     border-radius: 10px;
@@ -74,19 +124,70 @@ article {
     flex-wrap: wrap;
 }
 
+.upcoming a {
+    text-decoration: none;
+}
+
+section a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: auto;
+    border: 3px solid white;
+    border-radius: 10px;
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+    flex-wrap: wrap;
+    text-decoration: none;
+}
+
+.event {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: auto;
+    height: auto;
+    flex-wrap: wrap;
+}
+
+.event a {
+    text-decoration: none;
+}
+
+
+.learning {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: auto;
+    height: auto;
+    flex-wrap: wrap;
+}
+
+.learning a {
+    text-decoration: none;
+}
+
 article h3 {
     display: flex;
     justify-content: center;
     text-align: center;
     font-size: 2em;
     margin-bottom: 30px;
+    width: 100%;
+    text-decoration: none;
+    color: white;
 }
+
 
 article img {
     display: flex;
     width: 100%;
-    height: auto;  
-    max-height: 200px; 
     object-fit: scale-down;
     margin-bottom: 20px;
 }
@@ -94,13 +195,10 @@ article img {
 article h4 {
     display: flex;
     justify-content: center;
+    text-align: center;
     font-size: 1.2em;
     margin-top: 10px;
     margin-bottom: 20px;
-}
-
-article p {
-    display: flex;
-    justify-content: center;
-    margin-top: 0px;   
+    text-decoration: none;
+    color: white;
 }
