@@ -13,7 +13,7 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-
+    justify-content: center;
 }
 
 .top-page span {
@@ -22,6 +22,8 @@ header {
     padding-left: 20px;
     margin-top: 20px;
     color: white;
+    position: absolute;
+    z-index: 1;
 }
 
 .top-page h1 {
