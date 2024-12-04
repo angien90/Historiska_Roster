@@ -2,10 +2,45 @@ body {
     background-color: black;
     color: white;
 }
-
 header {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
+}
 
+.top-page {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.top-page span {
+    font-size: 50px;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-top: 20px;
+    color: white;
+}
+
+.top-page h1 {
+    margin: auto; 
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 50px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+main p {
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 40px;
+    margin-top: 10px;
 }
