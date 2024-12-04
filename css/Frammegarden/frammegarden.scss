@@ -1,0 +1,11 @@
+@import 'reset';
+
+@import 'mobileframmegarden';
+
+@media screen and (min-width:1026px) {
+    @import 'tabletframmegarden';
+}
+
+@media screen and (min-width:1366px) {
+    @import 'desktopframmegarden';
+}
