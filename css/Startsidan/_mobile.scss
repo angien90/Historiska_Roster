@@ -6,46 +6,138 @@ body {
 header {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-}
-
-header h1 {
-    display: flex;
-    justify-content: center;
-    margin-top: 5px;
-    font-size: 3em;
+    align-items: center;
 }
 
 header img {
-    display: flex;
-    justify-content: center;
-    width: 150px;
-    display: block;
-    margin: auto;
+    width: 200px;
+    position: relative;
+    z-index: 2;
+}
+
+h1{
+    transform: translateY(-50%);
+    width: 80%;
+    text-align: center;
+    font-size: 2em;
+    letter-spacing: 0.1rem; 
+    top: 250px;  
+    margin-bottom: 20px;
+    position: absolute;
+    z-index: 2;
+}
+
+h1 span{
+    opacity: 0;
+    display: inline-block;
+    animation: animate 1s linear forwards;
+}
+
+.top-effect {
+    height: 40px;
+    background: #000;
+    padding-bottom: 30px;
+}
+
+video {
+    width: 100vw;
+}
+
+@keyframes animate {
+    0%{
+        opacity: 0;
+        transform: rotateY(90deg);
+        filter: blur(10px);
+    }
+    100%{
+        opacity: 1;
+        transform: rotateY(0deg);
+        filter: blur(0px);
+    }
+}
+
+h1 span:nth-child(1){
+    animation-delay: 1s; //H
+}
+h1 span:nth-child(2){
+    animation-delay: 1.5s; //I
+}
+h1 span:nth-child(3){
+    animation-delay: 1.75s; //S
+}
+h1 span:nth-child(4){
+    animation-delay: 2s; //T
+}
+h1 span:nth-child(5){
+    animation-delay: 2s; //O
+}
+h1 span:nth-child(6){
+    animation-delay: 2.5s; //R
+}
+h1 span:nth-child(7){
+    animation-delay: 2.7s; //I
+}
+h1 span:nth-child(8){
+    animation-delay: 3s; //S
+}
+h1 span:nth-child(9){
+    animation-delay: 3s; //K
+}  
+h1 span:nth-child(10){
+    animation-delay: 3.5s; //A
+}
+h1 span:nth-child(11){
+    animation-delay: 3.5s;
+}
+h1 span:nth-child(12){
+    animation-delay: 3.5s; //R
+}
+h1 span:nth-child(13){
+    animation-delay: 3.7s; //Ö
+}
+h1 span:nth-child(14){
+    animation-delay: 4s; //S
+}
+h1 span:nth-child(15){
+    animation-delay: 4s; //T
+}
+h1 span:nth-child(16){
+    animation-delay: 4.5s; //E
+}
+h1 span:nth-child(17){
+    animation-delay: 4.7s; //R
 }
 
 nav {
-    width: 100%;
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 nav ul {
     display: flex;
-    gap: 10px;
+    gap: 5px;
     list-style: none;
+    text-align: center;
     padding: 0px;
+}
 
+nav li {
+    align-content: center;
 }
 
 .link {
+    display: flex;
+    justify-content: center;
     text-decoration: none;
     color: white;
-    font-size: 1rem; 
-    padding: 0.5rem 1rem;
+    font-size: 1em; 
     position: relative;
-    padding: 1rem;
+    padding-left: 5px;
+    padding-right: 5px;
+
 }
 
 .link::before {
@@ -73,7 +165,7 @@ nav ul {
     }
     100% {
         width: 100%;
-        height: 100%;
+        height: 10%;
         background: hsl(0, 100%, 100%, 0.2);
         border-radius: 5px;
     }
@@ -83,12 +175,18 @@ hr {
     line-break: normal;
     color: white;
     width: 90%;
+    position: relative;
+    z-index: 2;
+}
+
+main {
+    position: absolute;
 }
 
 main h2 {
     padding-left: 10px;
     text-align: center;
-    font-size: 3em;
+    font-size: 2em;
     margin-bottom: 5px;
     margin-top: 50px;
     padding-left: 0px;
@@ -100,6 +198,9 @@ main h2 {
 
 main p {
     text-align: center;
+    margin-top: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 section {
@@ -117,7 +218,7 @@ section {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    width: 50%;
+    width: 60%;
     height: auto;
     border: 3px solid white;
     border-radius: 10px;
@@ -133,12 +234,13 @@ section {
     text-decoration: none;
 }
 
+
 section a {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 50%;
+    width: 60%;
     height: auto;
     border: 3px solid white;
     border-radius: 10px;
@@ -182,7 +284,7 @@ article h3 {
     display: flex;
     justify-content: center;
     text-align: center;
-    font-size: 2em;
+    font-size: 1.5em;
     margin-bottom: 30px;
     width: 100%;
     text-decoration: none;
@@ -201,9 +303,13 @@ article h4 {
     display: flex;
     justify-content: center;
     text-align: center;
-    font-size: 1.2em;
+    font-size: 1em;
     margin-top: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     text-decoration: none;
     color: white;
+}
+
+article.stories {
+    height: auto;
 }
