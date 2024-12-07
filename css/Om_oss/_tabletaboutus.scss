@@ -3,8 +3,25 @@ header h1 {
     font-size: 3em;
 }
 
+.top-page span {
+    font-size: 50px;
+}
+
 header img {
     width: 40%;
+}
+
+.teamet {
+    display: flex;
+    flex-direction: row;
+    
+
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+
 }
 
 main h2 {

@@ -1,12 +1,5 @@
-header img {
-    width: 200px;
-    position: relative;
-    z-index: 2;
-}
-
 h1 {
     font-size: 3em;
-    top: 230px;
 }
 
 .link {
@@ -32,7 +25,6 @@ main h2 {
 
 main p {
     font-size: 1.2em;
-    margin-top: 5px;
 }
 
 section {
@@ -44,7 +36,7 @@ section {
 
 .upcoming {
     width: 25%;
-    height: 430px;
+    height: 480px;
 }
 
 section a {
@@ -64,11 +56,8 @@ article {
 }
 
 article h3 {
-    font-size: 1.5em;
     margin: 0px;
-    height: 85px;
-    width: auto;
-   
+    height: 85px;   
 }
 
 article img {
@@ -81,4 +70,12 @@ article img {
 
 article h4 {
     font-size: 1.2em;
+}
+
+.recension {
+    flex-direction: row;
+}
+
+.recension img {
+    width: 30%;
 }

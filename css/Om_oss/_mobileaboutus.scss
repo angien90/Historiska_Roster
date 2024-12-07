@@ -11,7 +11,7 @@ header {
 
 .top-page {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     justify-content: center;
 }
@@ -44,6 +44,16 @@ main h2 {
     margin-top: 50px;
     text-align: center;
     margin-bottom: 10px;
+}
+
+.teamet {
+    border: 1px solid black;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 main p {
