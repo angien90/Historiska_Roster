@@ -1,4 +1,4 @@
-header h1 {
+.top-page h1 {
     margin-bottom: 30px;
     font-size: 3em;
 }
@@ -7,15 +7,16 @@ header h1 {
     font-size: 50px;
 }
 
-header img {
+.team {
+    margin: auto;
     width: 40%;
+    height:auto;
+    margin-top: 20px;
 }
 
 .teamet {
     display: flex;
     flex-direction: row;
-    
-
 }
 
 .profile {
