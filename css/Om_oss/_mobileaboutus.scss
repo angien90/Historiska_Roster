@@ -17,7 +17,7 @@ header {
 }
 
 .top-page span {
-    font-size: 50px;
+    font-size: 30px;
     padding-right: 20px;
     padding-left: 20px;
     margin-top: 20px;
@@ -30,12 +30,14 @@ header {
     margin: auto; 
     margin-top: 20px;
     margin-bottom: 20px;
+    font-size: 1.5em;
 }
 
 .team {
     margin: auto;
-    width: 40%;
+    width: 80%;
     height:auto;
+    margin-top: 20px;
 }
 
 main h2 {
@@ -46,14 +48,16 @@ main h2 {
     margin-bottom: 10px;
 }
 
-.teamet {
-    border: 1px solid black;
+main h3 {
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
 }
 
-.profile {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+main h4 {
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
 }
 
 main p {
@@ -89,9 +93,15 @@ main p {
     margin-top: 10px;
 }
 
-
 .vision p {
-    margin-bottom: 0px;
-    margin-top: 5px;
-    padding: 0px;
+    margin-bottom: 10px;
+    margin-top: 0px;
+}
+
+.ledord {
+    font-weight: bolder; 
+}
+
+.link {
+    color: white; 
 }
