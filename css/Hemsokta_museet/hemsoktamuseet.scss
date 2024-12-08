@@ -1,0 +1,11 @@
+@import 'resethemsoktamuseet';
+
+@import 'mobilehemsoktamuseet';
+
+@media screen and (min-width:1024px) {
+    @import 'tablethemsoktamuseet';
+}
+
+@media screen and (min-width:1366px) {
+    @import 'desktophemsoktamuseet';
+}

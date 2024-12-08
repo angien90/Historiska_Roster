@@ -1,0 +1,11 @@
+@import 'resethjortsberga';
+
+@import 'mobilehjortsberga';
+
+@media screen and (min-width:1024px) {
+    @import 'tablethjortsberga';
+}
+
+@media screen and (min-width:1366px) {
+    @import 'desktophjortsberga';
+}
