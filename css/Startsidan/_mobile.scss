@@ -300,10 +300,11 @@ article h3 {
 }
 
 article img {
-    display: flex;
+    display: block;
     width: 100%;
-    object-fit: scale-down;
-    margin-bottom: 20px;
+    height: auto;
+    object-fit: cover;
+    margin: 0;
 }
 
 article h4 {
