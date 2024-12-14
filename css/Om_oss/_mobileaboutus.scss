@@ -11,7 +11,7 @@ header {
 
 .top-page {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-between;
     justify-content: center;
 }
@@ -30,41 +30,47 @@ header {
     margin: auto; 
     margin-top: 20px;
     margin-bottom: 20px;
-    font-size: 1.5em;
+    font-size: 2em;
 }
 
-.team {
+header img {
     margin: auto;
     width: 80%;
     height:auto;
-    margin-top: 20px;
+    filter: grayscale(60%);
+    border-radius: 5px;
 }
 
 main h2 {
-    padding-left: 10px;
-    padding-right: 10px;
-    margin-top: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 60px;
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
+    font-size: 2em;
 }
 
 main h3 {
     padding-left: 10px;
     padding-right: 10px;
+    margin-top: 50px;
     text-align: center;
+    margin-bottom: 10px;
+    font-size: 1.5em;
 }
 
 main h4 {
     padding-left: 10px;
     padding-right: 10px;
     text-align: center;
+    font-size: 1em;
 }
 
 main p {
     text-align: center;
-    padding-left: 10px;
-    padding-right: 10px;
-    margin-bottom: 40px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-bottom: 30px;
     margin-top: 10px;
 }
 
