@@ -51,13 +51,18 @@ section a {
     height: 400px;
 }
 
+.learning img {
+    margin-bottom: 0px;
+}
+
 article {
-    height: 600px;
+    height: auto;
 }
 
 article h3 {
     margin: 0px;
     height: 85px;   
+    font-size: 2em;
 }
 
 article img {
@@ -70,6 +75,7 @@ article img {
 
 article h4 {
     font-size: 1.2em;
+
 }
 
 .recension {
@@ -79,3 +85,4 @@ article h4 {
 .recension img {
     width: 30%;
 }
+
