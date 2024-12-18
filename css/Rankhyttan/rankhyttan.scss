@@ -1,0 +1,11 @@
+@import 'resetrankhyttan';
+
+@import 'mobilerankhyttan';
+
+@media screen and (min-width:1024px) {
+    @import 'tabletrankhyttan';
+}
+
+@media screen and (min-width:1366px) {
+    @import 'desktoprankhyttan';
+}
