@@ -224,7 +224,7 @@ section {
     flex-direction: row;
     justify-content: center;
     width: 80%;
-    height: 400px;
+    height: auto;
     border: 3px solid white;
     border-radius: 10px;
     padding-right: 10px;
@@ -264,7 +264,6 @@ section {
     justify-content: center;
     width: 80%;
     height: auto;
-    max-height: 450px;
     border: 3px solid white;
     border-radius: 10px;
     flex-wrap: wrap;
@@ -276,6 +275,7 @@ section {
 }
 
 a {
+    width: 100%;
     text-decoration: none;
 }
 
@@ -288,6 +288,7 @@ a {
 .card h4 {
     font-size: 1.2em;
     color: black;
+    margin-top: 0px;
 }
 
 .card img {
@@ -298,6 +299,7 @@ a {
     margin-left: 10px;
     margin-right: 10px;
     border-radius: 10px;
+    margin-bottom: 30px;
 }
 
 .card:hover {
