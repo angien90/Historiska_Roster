@@ -1,6 +1,7 @@
 body {
     background-color: black;
     color: white;
+    font-family: "Caesar Dressing", serif;
 }
 
 header {
@@ -14,6 +15,10 @@ header {
     flex-direction: row;
     justify-content: space-between;
     justify-content: center;
+}
+
+.material-symbols-outlined {
+    margin-left: -10px;
 }
 
 .top-page span {
@@ -30,7 +35,7 @@ header {
     margin: auto; 
     margin-top: 20px;
     margin-bottom: 20px;
-    font-size: 2em;
+    padding-left: 20px;
 }
 
 header img {
@@ -61,6 +66,19 @@ main h3 {
 
 main p {
     text-align: center;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-bottom: 30px;
+    margin-top: 10px;
+}
+
+a {
+    color: white;
+}
+
+main q {
+    display: flex;
+    justify-content: center;
     padding-left: 30px;
     padding-right: 30px;
     margin-bottom: 30px;
@@ -110,11 +128,13 @@ main li {
 }
 
 article {
-    width: 100%;
+    width: auto;
     display: flex;
     justify-content: center;
     margin-top: 30px;
     margin-bottom: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 hr {
