@@ -27,3 +27,13 @@ main p {
     padding-left: 40px;
     padding-right: 40px;
 }
+
+.gallery {
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.image-container img {
+    width: auto;               
+    height: 300px;    
+}
