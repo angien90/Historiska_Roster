@@ -197,10 +197,10 @@ hr {
 
 p {
     text-align: center;
-    font-size: 3vw;
-    padding-left: 10px;
-    padding-right: 10px;
-    margin-top: 30px;
+    font-size: 4vw;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 5px;
     top: 60vw; 
 }
 
@@ -244,7 +244,7 @@ section {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    width: 80%;
+    width: 90%;
     height: auto;
     border: 3px solid white;
     border-radius: 10px;
@@ -274,7 +274,7 @@ section {
     width: 100%;
     max-width: 100%;
     height: auto;
-    max-height: 300px;
+    max-height: 200px;
     border-radius: 10px;
     object-fit: cover;
     display: block;
@@ -282,7 +282,7 @@ section {
 }
 
 .card-still p {
-    font-size: 1.2em;
+    font-size: 1.5em;
     color: black;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -293,7 +293,7 @@ section {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    width: 80%;
+    width: 90%;
     height: auto;
     border: 3px solid white;
     border-radius: 10px;
@@ -324,26 +324,28 @@ a {
     justify-content: flex-end;
     width: 100%;
     margin-top: 10px;
+    
 }
 
 .card h3 {
     font-size: 1.8em;
     color: black;
     margin-bottom: 0px;
-    margin-top: 20px;
+    margin-top: 0px;
 }
 
 .card h4 {
     font-size: 1.2em;
     color: black;
-    margin-top: 10px;
+    margin-top: 0px;
+    margin-bottom: 15px;
 }
 
 .card img {
     width: 100%;
     max-width: 100%;
     height: auto;
-    max-height: 300px;
+    max-height: 200px;
     border-radius: 10px;
     object-fit: cover;
     display: block;
