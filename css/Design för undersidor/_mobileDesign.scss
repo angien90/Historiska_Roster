@@ -4,12 +4,7 @@ body {
     font-family: "Caesar Dressing", serif;
 }
 
-header {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
+/* Sidnamn och pil tillbaka */
 .top-page {
     display: flex;
     flex-direction: row;
@@ -41,12 +36,20 @@ header {
     font-size: 2em;
 }
 
+/* Innehåll högst upp */
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 header p {
     text-align: center; 
     margin-bottom: 0px;
     padding-left: 10px;
     padding-right: 10px;
     font-size: 1em;
+    font-family: "Amatic SC";
 }
 
 header img {
@@ -57,6 +60,7 @@ header img {
     margin-top: 30px;
 }
 
+/* Huvudinnehåll */
 main h2 {
     padding-left: 10px;
     padding-right: 10px;
@@ -92,21 +96,27 @@ main p {
     margin-bottom: 30px;
     margin-top: 10px;
     font-size: 1em;
+    font-family: "Amatic SC";
+}
+
+/* Länkningar direkt i brödtext */
+.link {
+    color: white; 
 }
 
 a {
     color: white;
 }
 
-main q {
-    display: flex;
-    justify-content: center;
-    padding-left: 10px;
-    padding-right: 10px;
-    margin-bottom: 30px;
-    margin-top: 10px;
+/* Siddelare */
+hr {
+    line-break: normal;
+    color: white;
+    width: 90%;
+    margin-top: 60px;
 }
 
+/* Listor i brödtext */
 main ul {
     display: flex;
     flex-direction: column;
@@ -125,8 +135,25 @@ main li {
     margin-right: 10px;
     margin-bottom: 20px;
     margin-top: 10px;
+    font-size: 1em;
+    font-family: "Amatic SC";
 }
 
+/* Quotes i brödtext t.ex. Gathenhielmska husets sida */
+main q {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 30px;
+    margin-top: 10px;
+    font-size: 1em;
+    font-family: "Amatic SC";
+    font-weight: bold;
+}
+
+/* Familjeträd på Frammegården */
 .family-tree {
     display: flex;
     justify-content: center;
@@ -136,6 +163,7 @@ main li {
     border-radius: 5px;
 }
 
+/* Bildspel ihop med brödtext */ 
 .gallery {
     display: flex;
     flex-direction: column;
@@ -165,23 +193,7 @@ main li {
     margin-top: 10px;           
 }
 
-article {
-    width: auto;
-    display: flex;
-    justify-content: center;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
-hr {
-    line-break: normal;
-    color: white;
-    width: 90%;
-    margin-top: 60px;
-}
-
+/* Vision och ledord på sidan om oss */
 .vision {
     display: flex;
     flex-direction: column;
@@ -214,8 +226,8 @@ hr {
 .vision p {
     margin-bottom: 10px;
     margin-top: 0px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .ledord {
@@ -224,30 +236,15 @@ hr {
     padding-right: 10px;
 }
 
-.link {
-    color: white; 
-}
-
-/* Pop-up för feedback */
-.feedback-icon {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    cursor: pointer;
-    z-index: 1000;
-}
-
-.feedback-icon img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: white;
-    padding: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-}
-
+/* Youtube videor */
 article {
-    margin-bottom: 50px;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .custom-thumbnail {
@@ -276,6 +273,24 @@ article {
     padding: 15px 20px;
     font-size: 30px;
     pointer-events: none;
+}
+
+/* Pop-up för feedback */
+.feedback-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.feedback-icon img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: white;
+    padding: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 .feedback-popup {

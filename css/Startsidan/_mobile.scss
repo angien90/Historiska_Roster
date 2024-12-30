@@ -150,7 +150,7 @@ nav li {
     justify-content: center;
     text-decoration: none;
     color: white;
-    font-size: 4vw; 
+    font-size: 3vw; 
     position: relative;
     padding-left: 5px;
     padding-right: 5px;
@@ -197,10 +197,10 @@ hr {
 
 p {
     text-align: center;
-    font-size: 4vw;
+    font-size: 3vw;
     padding-left: 20px;
     padding-right: 20px;
-    margin-top: 5px;
+    margin-top: 7%;
     top: 60vw; 
 }
 
@@ -212,7 +212,7 @@ main {
 main h2 {
     padding-left: 10px;
     text-align: center;
-    font-size: 2em;
+    font-size: 5vw;
     margin-bottom: 5px;
     margin-top: 50px;
     padding-left: 10px;
@@ -220,7 +220,7 @@ main h2 {
 }
 
 .first-section {
-    margin-top: 40px;
+    margin-top: 5%;
 }
 
 main p {
@@ -259,15 +259,17 @@ section {
 }
 
 .card-still h3 {
-    font-size: 1.8em;
+    font-size: 5wv;
     color: black;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 .card-still h4 {
-    font-size: 1.2em;
+    font-size: 4wv;
     color: black;
     margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .card-still img {
@@ -278,7 +280,7 @@ section {
     border-radius: 10px;
     object-fit: cover;
     display: block;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .card-still p {
@@ -313,7 +315,7 @@ a {
 }
 
 .card p {
-    font-size: 1.2em;
+    font-size: 1em;
     color: black;
     margin-top: 0px;
 }
@@ -323,19 +325,18 @@ a {
     display: flex;
     justify-content: flex-end;
     width: 100%;
-    margin-top: 10px;
-    
+    margin-top: 5px;   
 }
 
 .card h3 {
-    font-size: 1.8em;
+    font-size: 5wv;
     color: black;
     margin-bottom: 0px;
     margin-top: 0px;
 }
 
 .card h4 {
-    font-size: 1.2em;
+    font-size: 4wv;
     color: black;
     margin-top: 0px;
     margin-bottom: 15px;
