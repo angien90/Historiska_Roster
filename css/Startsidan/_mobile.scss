@@ -212,7 +212,7 @@ main {
 main h2 {
     padding-left: 10px;
     text-align: center;
-    font-size: 5vw;
+    font-size: 4vw;
     margin-bottom: 5px;
     margin-top: 50px;
     padding-left: 10px;
@@ -229,6 +229,7 @@ main p {
     padding-left: 20px;
     padding-right: 20px;
     margin-bottom: 10px;
+    font-size: 3vw;
 }
 
 section {
@@ -259,14 +260,14 @@ section {
 }
 
 .card-still h3 {
-    font-size: 5wv;
+    font-size: 4vw;
     color: black;
     margin-bottom: 20px;
     margin-top: 20px;
 }
 
 .card-still h4 {
-    font-size: 4wv;
+    font-size: 3vw;
     color: black;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -407,31 +408,38 @@ a {
     padding: 20px;
     border-radius: 10px;
     text-align: center;
-    width: 300px;
+    font-size: 2.5vw;
+    width: 70%;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
     position: relative; /* Gör att absolut positionerade element inom denna blockeras relativt till den här */
 }
 
 .popup-content h3 {
+    margin-top: 0px;
     margin-bottom: 10px;
-    font-size: 1.5em;
+    font-size: 4vw;
+}
+
+.popup-content p {
+    margin-bottom: 10px;
+    font-size: 3vw;
 }
 
 .feedback-link {
     text-decoration: none;
     color: black;
     font-weight: bold;
-    font-size: 1.5em;
+    font-size: 4vw;
     margin-bottom: 10px;
 }
 
 .close-btn {
-    font-size: 50px;
+    font-size: 8vw;
     font-weight: bold;
     cursor: pointer;
     position: absolute;
-    top: 10px;  /* Justerat avståndet från toppen */
-    right: 10px;  /* Justerat avståndet från höger */
+    top: 0px; 
+    right: 20px;  
     color: black;
 }
 
