@@ -1,3 +1,4 @@
+/* Sidnamn och pil tillbaka */
 .top-page span {
     font-size: 50px;
 }
@@ -6,6 +7,7 @@
     font-size: 3em;
 }
 
+/* Innehåll högst upp */
 header p {
     font-size: 2em;
     padding-left: 40px;
@@ -18,20 +20,29 @@ header img {
     margin-bottom: 20px;
 }
 
+/* Huvudinnehåll */
 main h2 {
     font-size: 2.5em;
     margin-top: 50px;
 }
 
-article {
-    flex-direction: row;
-    flex-wrap: wrap;
+main h3 {
+    font-size: 2em;
+}
+
+main h4 {
+    font-size: 2em;
 }
 
 main p {
     font-size: 2em;
     padding-left: 40px;
     padding-right: 40px;
+}
+
+article {
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .gallery {
