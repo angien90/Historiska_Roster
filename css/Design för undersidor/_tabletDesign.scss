@@ -65,6 +65,33 @@ iframe {
     width: 500px;
 }
 
+/* Listor i brödtext */
+main ul {
+    font-size: 2em;
+}
+
+main li {
+    font-size: 1em;
+}
+
+/* Bildspel ihop med brödtext */ 
+main figcaption {
+    font-size: 1em;
+}
+
+/* Vision och ledord på sidan om oss */
+.vision h3 {
+    font-size: 2em;
+}
+
+.vision h4 {
+    font-size: 1.5em;
+}
+
+.vision p {
+    font-size: 2em;
+}
+
 /* Pop-up för feedback */
 .feedback-icon {
     bottom: 10px;
