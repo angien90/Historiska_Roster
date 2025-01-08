@@ -36,7 +36,7 @@ p {
 
 main h2 {
     margin-top: 90px;
-    font-size: 3em;
+    font-size: 2.5em;
 }
 
 main p {
@@ -59,13 +59,13 @@ section {
 }
 
 .card-still h3 {
-    font-size: 2.2vw;
+    font-size: 2em;
     margin-bottom: 10px;
     
 }
 
 .card-still h4 {
-    font-size: 1.8vw;
+    font-size: 1.5em;
 }
 
 .card-still img {
@@ -76,6 +76,7 @@ section {
 
 .card-still p {
     margin-top: 0px;
+    font-size: 1.5em;
 }
 
 .card {
@@ -87,12 +88,12 @@ section {
 }
 
 .card h3 {
-    font-size: 2.2vw; 
+    font-size: 2em; 
     margin-bottom: 10px;
 }
 
 .card h4 {
-    font-size: 1.8vw;
+    font-size: 1.5em;
 }
 
 .card img {
@@ -102,7 +103,7 @@ section {
 }
 
 .card p {
-    font-size: 1.8vw;
+    font-size: 1.5em;
 }
 
 .recension {
@@ -123,12 +124,20 @@ section {
 .feedback-icon img {
     width: 40%;
     height: 40%;
-    border-radius: 50%;
-    background-color: white;
-    padding: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 .popup-content {
     width: 500px;
+}
+
+.popup-content h3 {
+    font-size: 1.5em;
+}
+
+.popup-content p {
+    font-size: 1em;
+}
+
+.feedback-link {
+    font-size: 1.5em;
 }
