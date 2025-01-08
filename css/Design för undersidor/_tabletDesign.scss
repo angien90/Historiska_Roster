@@ -5,6 +5,7 @@
 
 .top-page h1 {
     font-size: 3em;
+    padding-left: 10px;
 }
 
 /* Innehåll högst upp */
@@ -74,6 +75,10 @@ main li {
     font-size: 1em;
 }
 
+main q {
+    font-size: 1em;
+}
+
 /* Bildspel ihop med brödtext */ 
 main figcaption {
     font-size: 1em;
@@ -89,6 +94,10 @@ main figcaption {
 }
 
 .vision p {
+    font-size: 2em;
+}
+
+.ledord {
     font-size: 2em;
 }
 
