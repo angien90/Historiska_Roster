@@ -37,16 +37,3 @@
         </iframe>
     `;
   }
-
-
-/*
-// FUNTKION FÖR DARK/LIGHT MODE
-  window.addEventListener("load", function () {
-    const toggleButton = document.getElementById("toggleMode");
-
-    if (toggleButton) {
-        toggleButton.addEventListener("click", function () {
-            document.body.classList.toggle("light-mode");
-        });
-    }
-  });
