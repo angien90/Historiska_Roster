@@ -96,7 +96,6 @@ main figcaption {
 .feedback-icon {
     bottom: 10px;
     right: -70px;
-
 }
 
 .feedback-icon img {
@@ -105,17 +104,25 @@ main figcaption {
 }
 
 .popup-content {
-    width: 500px;
+    width: 60%;
+    height: 300px;
 }
 
 .popup-content h3 {
-    font-size: 1.5em;
+    font-size: 3em;
+    margin-bottom: 50px;
 }
 
 .popup-content p {
-    font-size: 1em;
+    font-size: 2em;
+    margin-bottom: 50px;
 }
 
 .feedback-link {
-    font-size: 1.5em;
+    font-size: 3em;
+}
+
+.close-btn {
+    font-size: 6em;
+    top: -10px; 
 }
