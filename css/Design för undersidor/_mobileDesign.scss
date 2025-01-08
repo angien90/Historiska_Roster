@@ -1,3 +1,4 @@
+/* Default styles (dark mode) */
 body {
     background-color: black;
     color: white;
@@ -12,11 +13,11 @@ body {
 }
 
 .material-symbols-outlined {
-    margin-left: -10px;
+    font-size: 4vw;
 }
 
 .top-page span {
-    font-size: 4vw;
+    font-size: 6vw;
     padding-right: 20px;
     padding-left: 20px;
     margin-top: 20px;
@@ -30,7 +31,7 @@ body {
     margin-top: 20px;
     margin-bottom: 0px;
     padding-right: 10px;
-    padding-left: 35px;
+    padding-left: 10px;
     text-wrap: wrap;
     text-align: center;
     font-size: 5vw;
