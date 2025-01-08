@@ -26,7 +26,7 @@ h1{
     transform: translateY(-50%);
     width: 100%;
     text-align: center;
-    font-size: 5vw; 
+    font-size: clamp(3.5em, 5vw, 3.5em); 
     top: 40vw;  
     margin-bottom: 20px;
     position: absolute;
@@ -150,7 +150,7 @@ nav li {
     justify-content: center;
     text-decoration: none;
     color: white;
-    font-size: 3vw; 
+    font-size: clamp(2em, 3vw, 2em); 
     position: relative;
     padding-left: 5px;
     padding-right: 5px;
@@ -195,9 +195,9 @@ hr {
     z-index: 2;
 }
 
-p {
+header p {
     text-align: center;
-    font-size: 3vw;
+    font-size: clamp(2em, 3vw, 2em);
     padding-left: 20px;
     padding-right: 20px;
     margin-top: 7%;
@@ -212,7 +212,7 @@ main {
 main h2 {
     padding-left: 10px;
     text-align: center;
-    font-size: 4vw;
+    font-size: clamp(2.5em, 4vw, 2.5em);
     margin-bottom: 5px;
     margin-top: 50px;
     padding-left: 10px;
@@ -229,7 +229,7 @@ main p {
     padding-left: 20px;
     padding-right: 20px;
     margin-bottom: 10px;
-    font-size: 3vw;
+    font-size: clamp(2em, 3vw, 2em);
 }
 
 section {
@@ -260,14 +260,14 @@ section {
 }
 
 .card-still h3 {
-    font-size: 4vw;
+    font-size: clamp(2.5em, 5vw, 2.5em);
     color: black;
     margin-bottom: 20px;
     margin-top: 20px;
 }
 
 .card-still h4 {
-    font-size: 3vw;
+    font-size: clamp(2em, 3vw, 2em);
     color: black;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -285,12 +285,11 @@ section {
 }
 
 .card-still p {
-    font-size: 1.5em;
+    font-size: clamp(1.5em, 3vw, 1.5em);
     color: black;
     margin-top: 20px;
     margin-bottom: 20px;
 }
-
 
 .card {
     display: flex;
@@ -316,7 +315,7 @@ a {
 }
 
 .card p {
-    font-size: 1em;
+    font-size: clamp(1.5em, 3vw, 1.5em);
     color: black;
     margin-top: 0px;
 }
@@ -330,14 +329,14 @@ a {
 }
 
 .card h3 {
-    font-size: 5wv;
+    font-size: clamp(2.5em, 5vw, 2.5em);
     color: black;
     margin-bottom: 0px;
     margin-top: 0px;
 }
 
 .card h4 {
-    font-size: 4wv;
+    font-size: clamp(2em, 3vw, 2em);
     color: black;
     margin-top: 0px;
     margin-bottom: 15px;
@@ -371,7 +370,6 @@ a {
     height: auto;
 }
 
-/* Pop-up för feedback */
 .feedback-icon {
     position: fixed;
     bottom: 20px;
@@ -408,33 +406,32 @@ a {
     padding: 20px;
     border-radius: 10px;
     text-align: center;
-    font-size: 2.5vw;
     width: 70%;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
     position: relative; /* Gör att absolut positionerade element inom denna blockeras relativt till den här */
 }
 
 .popup-content h3 {
-    margin-top: 0px;
+    margin-top: 0;
     margin-bottom: 10px;
-    font-size: 4vw;
+    font-size: clamp(2.5em, 6vw, 2.5em);
 }
 
 .popup-content p {
-    margin-bottom: 10px;
-    font-size: 3vw;
+    margin-bottom: 20px;
+    font-size: clamp(2.5em, 5vw, 2.5em);
 }
 
 .feedback-link {
     text-decoration: none;
     color: black;
     font-weight: bold;
-    font-size: 4vw;
+    font-size: clamp(2.5em, 6vw, 2.5em);
     margin-bottom: 10px;
 }
 
 .close-btn {
-    font-size: 8vw;
+    font-size: clamp(5em, 10vw, 5em);
     font-weight: bold;
     cursor: pointer;
     position: absolute;
