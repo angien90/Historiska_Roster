@@ -13,11 +13,11 @@ body {
 }
 
 .material-symbols-outlined {
-    font-size: 5vw;
+    font-size: clamp(1em, 5vw, 1em);
 }
 
 .top-page span {
-    font-size: 7vw;
+    font-size: clamp(3em, 7vw, 3em);
     padding-right: 20px;
     padding-left: 20px;
     margin-top: 20px;
@@ -34,7 +34,7 @@ body {
     padding-left: 20px;
     text-wrap: wrap;
     text-align: center;
-    font-size: 8vw;
+    font-size: clamp(4em, 8vw, 4em);
 }
 
 /* Innehåll högst upp */
@@ -49,7 +49,7 @@ header p {
     margin-bottom: 0px;
     padding-left: 20px;
     padding-right: 20px;
-    font-size: 5vw;
+    font-size: clamp(2.5em, 5vw, 2.5em);
     font-family: "Amatic SC";
 }
 
@@ -68,7 +68,7 @@ main h2 {
     margin-top: 30px;
     text-align: center;
     margin-bottom: 5px;
-    font-size: 7vw;
+    font-size: clamp(3em, 7vw, 3em);
     text-wrap: wrap;
 }
 
@@ -78,7 +78,7 @@ main h3 {
     margin-top: 20px;
     text-align: center;
     margin-bottom: 10px;
-    font-size: 6vw;
+    font-size: clamp(2.5em, 6vw, 2.5em);
     text-wrap: wrap;
 }
 
@@ -86,7 +86,7 @@ main h4 {
     padding-left: 10px;
     padding-right: 10px;
     text-align: center;
-    font-size: 5vw;
+    font-size: clamp(2em, 5vw, 2em);
     text-wrap: wrap;
 }
 
@@ -96,7 +96,7 @@ main p {
     padding-right: 20px;
     margin-bottom: 30px;
     margin-top: 10px;
-    font-size: 5vw;
+    font-size: clamp(2.5em, 5vw, 2.5em);
     font-family: "Amatic SC";
 }
 
@@ -123,7 +123,7 @@ main ul {
     flex-direction: column;
     justify-content:center;
     text-align: center;
-    font-size: 5vw;
+    font-size: clamp(2.5em, 5vw, 2.5em);
     list-style: none;
     margin-left: 0px;
     padding-left: 0px;
@@ -136,7 +136,7 @@ main li {
     margin-right: 10px;
     margin-bottom: 20px;
     margin-top: 10px;
-    font-size: 5vw;
+    font-size: clamp(2.5em, 5vw, 2.5em);
     font-family: "Amatic SC";
 }
 
@@ -149,7 +149,7 @@ main q {
     padding-right: 10px;
     margin-bottom: 30px;
     margin-top: 10px;
-    font-size: 5vw;
+    font-size: clamp(2.5em, 5vw, 2.5em);
     font-family: "Amatic SC";
     font-weight: bold;
 }
@@ -190,7 +190,7 @@ main q {
 
 main figcaption {
     color:white;
-    font-size: 5vw; 
+    font-size: clamp(2.5em, 5vw, 2.5em); 
     margin-top: 10px;  
 }
 
@@ -212,7 +212,7 @@ main figcaption {
 .vision h3 {
     margin-bottom: 0px;
     margin-top: 20px;
-    font-size: 6vw;
+    font-size: clamp(2.5em, 6vw, 2.5em);
     padding-left: 10px;
     padding-right: 10px;
 }
@@ -222,7 +222,7 @@ main figcaption {
     margin-top: 10px;
     padding-left: 10px;
     padding-right: 10px;
-    font-size: 5vw;
+    font-size: clamp(2em, 5vw, 2em);
 }
 
 .vision p {
@@ -230,14 +230,14 @@ main figcaption {
     margin-top: 0px;
     padding-left: 20px;
     padding-right: 20px;
-    font-size: 5vw;
+    font-size: clamp(2.5em, 5vw, 2.5em);
 }
 
 .ledord {
     font-weight: bolder; 
     padding-left: 10px;
     padding-right: 10px;
-    font-size: 5vw;
+    font-size: clamp(2.5em, 5vw, 2.5em);
 }
 
 /* Youtube videor */
@@ -280,6 +280,18 @@ article {
 }
 
 /* Pop-up för feedback */
+.recension {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.recension img {
+    width: 70%;
+    height: auto;
+}
+
 .feedback-icon {
     position: fixed;
     bottom: 20px;
@@ -324,24 +336,24 @@ article {
 .popup-content h3 {
     margin-top: 0;
     margin-bottom: 10px;
-    font-size: 6vw;
+    font-size: clamp(2.5em, 6vw, 2.5em);
 }
 
 .popup-content p {
     margin-bottom: 20px;
-    font-size: 5vw;
+    font-size: clamp(2.5em, 5vw, 2.5em);
 }
 
 .feedback-link {
     text-decoration: none;
     color: black;
     font-weight: bold;
-    font-size: 6vw;
+    font-size: clamp(2.5em, 6vw, 2.5em);
     margin-bottom: 10px;
 }
 
 .close-btn {
-    font-size: 10vw;
+    font-size: clamp(5em, 10vw, 5em);
     font-weight: bold;
     cursor: pointer;
     position: absolute;
