@@ -21,6 +21,11 @@
         font-size: 50%;
     }
 
+    .gallery {
+        flex-direction: column;
+        width: 10%;
+    }
+
     .material-symbols-outlined,
     footer {
         display: none !important;

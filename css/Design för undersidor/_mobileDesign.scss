@@ -1,5 +1,13 @@
+html, body {
+    height: 100%; /* Ger full höjd på sidan */
+    margin: 0; /* Ta bort oönskade marginaler */
+}
+
 /* Default styles (dark mode) */
 body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ser till att footern hamnar längst ner */
     background-color: black;
     color: white;
     font-family: "Caesar Dressing", serif;
@@ -170,7 +178,10 @@ main q {
     flex-direction: column;
     justify-content: space-evenly;
     gap: 10px;
-    width: 100%;
+    flex-wrap: wrap;
+    margin-left: 50px;
+    margin-right: 50px;
+    align-items: center;
 }
 
 .image-container {
@@ -189,9 +200,14 @@ main q {
 }
 
 main figcaption {
+    display: flex;
+    flex-direction: column;
     color:white;
-    font-size: clamp(2.5em, 5vw, 2.5em); 
-    margin-top: 10px;  
+    font-size: clamp(1em, 5vw, 1em); 
+    margin-top: 0px;  
+    margin-left: 50px;
+    margin-right: 50px;
+    flex-wrap: wrap;
 }
 
 /* Vision och ledord på sidan om oss */
@@ -277,6 +293,23 @@ article {
     padding: 15px 20px;
     font-size: 30px;
     pointer-events: none;
+}
+/* Footer */
+footer {
+    width: 100%;
+    bottom: 0;
+    background-color: black; 
+    text-align: center; 
+    padding: 10px 0; 
+}
+
+footer p {
+    color: white; 
+    margin: 0;
+    text-align: center;
+    font-weight: lighter;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 /* Pop-up för feedback */
