@@ -7,7 +7,7 @@ html, body {
 body {
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Ser till att footern hamnar längst ner */
+    justify-content: space-between;
     background-color: black;
     color: white;
     font-family: "Caesar Dressing", serif;
@@ -39,10 +39,10 @@ body {
     margin-top: 20px;
     margin-bottom: 0px;
     padding-right: 10px;
-    padding-left: 20px;
+    padding-left: 30px;
     text-wrap: wrap;
     text-align: center;
-    font-size: clamp(4em, 8vw, 4em);
+    font-size: clamp(3em, 8vw, 3em);
 }
 
 /* Innehåll högst upp */
@@ -57,7 +57,7 @@ header p {
     margin-bottom: 0px;
     padding-left: 20px;
     padding-right: 20px;
-    font-size: clamp(2.5em, 5vw, 2.5em);
+    font-size: clamp(2em, 4vw, 2em);
     font-family: "Amatic SC";
 }
 
@@ -76,7 +76,7 @@ main h2 {
     margin-top: 30px;
     text-align: center;
     margin-bottom: 5px;
-    font-size: clamp(3em, 7vw, 3em);
+    font-size: clamp(2.5em, 7vw, 2.5em);
     text-wrap: wrap;
 }
 
@@ -86,7 +86,7 @@ main h3 {
     margin-top: 20px;
     text-align: center;
     margin-bottom: 10px;
-    font-size: clamp(2.5em, 6vw, 2.5em);
+    font-size: clamp(2em, 6vw, 2em);
     text-wrap: wrap;
 }
 
@@ -94,7 +94,7 @@ main h4 {
     padding-left: 10px;
     padding-right: 10px;
     text-align: center;
-    font-size: clamp(2em, 5vw, 2em);
+    font-size: clamp(1.5em, 5vw, 1.5em);
     text-wrap: wrap;
 }
 
@@ -104,7 +104,7 @@ main p {
     padding-right: 20px;
     margin-bottom: 30px;
     margin-top: 10px;
-    font-size: clamp(2.5em, 5vw, 2.5em);
+    font-size: clamp(2em, 4vw, 2em);
     font-family: "Amatic SC";
 }
 
@@ -131,7 +131,7 @@ main ul {
     flex-direction: column;
     justify-content:center;
     text-align: center;
-    font-size: clamp(2.5em, 5vw, 2.5em);
+    font-size: clamp(2em, 4vw, 2em);
     list-style: none;
     margin-left: 0px;
     padding-left: 0px;
@@ -144,7 +144,7 @@ main li {
     margin-right: 10px;
     margin-bottom: 20px;
     margin-top: 10px;
-    font-size: clamp(2.5em, 5vw, 2.5em);
+    font-size: clamp(2em, 4vw, 2em);
     font-family: "Amatic SC";
 }
 
@@ -157,7 +157,7 @@ main q {
     padding-right: 10px;
     margin-bottom: 30px;
     margin-top: 10px;
-    font-size: clamp(2.5em, 5vw, 2.5em);
+    font-size: clamp(2em, 4vw, 2em);
     font-family: "Amatic SC";
     font-weight: bold;
 }
@@ -228,7 +228,7 @@ main figcaption {
 .vision h3 {
     margin-bottom: 0px;
     margin-top: 20px;
-    font-size: clamp(2.5em, 6vw, 2.5em);
+    font-size: clamp(2em, 6vw, 2em);
     padding-left: 10px;
     padding-right: 10px;
 }
@@ -238,7 +238,7 @@ main figcaption {
     margin-top: 10px;
     padding-left: 10px;
     padding-right: 10px;
-    font-size: clamp(2em, 5vw, 2em);
+    font-size: clamp(1.5em, 5vw, 1.5em);
 }
 
 .vision p {
@@ -246,7 +246,7 @@ main figcaption {
     margin-top: 0px;
     padding-left: 20px;
     padding-right: 20px;
-    font-size: clamp(2.5em, 5vw, 2.5em);
+    font-size: clamp(2em, 4vw, 2em);
 }
 
 .ledord {
@@ -294,6 +294,7 @@ article {
     font-size: 30px;
     pointer-events: none;
 }
+
 /* Footer */
 footer {
     width: 100%;
@@ -310,6 +311,7 @@ footer p {
     font-weight: lighter;
     padding-left: 10px;
     padding-right: 10px;
+    font-size: clamp(1em, 2vw, 1em);
 }
 
 /* Pop-up för feedback */
@@ -368,21 +370,23 @@ footer p {
 
 .popup-content h3 {
     margin-top: 0;
-    margin-bottom: 10px;
-    font-size: clamp(2.5em, 6vw, 2.5em);
+    margin-bottom: 20px;
+    font-size: clamp(2em, 5vw, 2em);
+    padding-top: 40px;
 }
 
 .popup-content p {
     margin-bottom: 20px;
-    font-size: clamp(2.5em, 5vw, 2.5em);
+    font-size: clamp(1.5em, 3vw, 1.5em);
+    color: black;
 }
 
 .feedback-link {
     text-decoration: none;
     color: black;
     font-weight: bold;
-    font-size: clamp(2.5em, 6vw, 2.5em);
-    margin-bottom: 10px;
+    font-size: clamp(2em, 5vw, 2em);
+    padding-bottom: 30px;
 }
 
 .close-btn {
@@ -390,7 +394,7 @@ footer p {
     font-weight: bold;
     cursor: pointer;
     position: absolute;
-    top: 0px; 
+    top: -15px; 
     right: 20px;  
     color: black;
 }

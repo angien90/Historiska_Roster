@@ -2,7 +2,16 @@
     box-sizing: border-box;
 }
 
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Default styles (dark mode) */
 body {
+   
     background-color: black;
     color: white;
     font-family: "Caesar Dressing", serif;
@@ -30,22 +39,22 @@ h1{
     transform: translateY(-50%);
     width: 100%;
     text-align: center;
-    font-size: clamp(3.5em, 5vw, 3.5em); 
+    font-size: clamp(3.5em, 7.5vw, 3.5em); 
     top: 40vw;  
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     position: absolute;
     z-index: 2;
     white-space: nowrap;
     padding-left: 10px;
     padding-right: 10px;
     font-weight: bolder;
-    margin-top: 40px;
 }
 
 h1 span{
     opacity: 0;
     display: inline-block;
     animation: animate 1s linear forwards;
+
 }
 
 .top-effect {
@@ -154,7 +163,7 @@ nav li {
     justify-content: center;
     text-decoration: none;
     color: white;
-    font-size: clamp(2em, 3vw, 2em); 
+    font-size: clamp(2.5em, 6.5vw, 2.5em); 
     position: relative;
     padding-left: 5px;
     padding-right: 5px;
@@ -201,22 +210,22 @@ hr {
 
 header p {
     text-align: center;
-    font-size: clamp(2em, 3vw, 2em);
+    font-size: clamp(1em, 4vw, 1em); 
     padding-left: 20px;
     padding-right: 20px;
-    margin-top: 7%;
     top: 60vw; 
 }
 
 main {
-    position: absolute;
+    position: relative;
     width: 100%;
+    flex: 1;
 }
 
 main h2 {
     padding-left: 10px;
     text-align: center;
-    font-size: clamp(2.5em, 4vw, 2.5em);
+    font-size: clamp(3em, 7vw, 3em); 
     margin-bottom: 5px;
     margin-top: 50px;
     padding-left: 10px;
@@ -229,11 +238,11 @@ main h2 {
 
 main p {
     text-align: center;
-    margin-top: 5px;
+    margin-top: 10px;
     padding-left: 20px;
     padding-right: 20px;
     margin-bottom: 10px;
-    font-size: clamp(2em, 3vw, 2em);
+    font-size: clamp(1em, 4vw 1em);
 }
 
 section {
@@ -264,14 +273,14 @@ section {
 }
 
 .card-still h3 {
-    font-size: clamp(2.5em, 5vw, 2.5em);
+    font-size: clamp(2.5em, 6.5vw, 2.5em);
     color: black;
     margin-bottom: 20px;
     margin-top: 20px;
 }
 
 .card-still h4 {
-    font-size: clamp(2em, 3vw, 2em);
+    font-size: clamp(2em, 6vw, 2em);
     color: black;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -286,13 +295,6 @@ section {
     object-fit: cover;
     display: block;
     margin-bottom: 10px;
-}
-
-.card-still p {
-    font-size: clamp(1.5em, 3vw, 1.5em);
-    color: black;
-    margin-top: 20px;
-    margin-bottom: 20px;
 }
 
 .card {
@@ -319,7 +321,7 @@ a {
 }
 
 .card p {
-    font-size: clamp(1.5em, 3vw, 1.5em);
+    font-size: clamp(1em, 4vw, 1em); 
     color: black;
     margin-top: 0px;
 }
@@ -333,14 +335,14 @@ a {
 }
 
 .card h3 {
-    font-size: clamp(2.5em, 5vw, 2.5em);
+    font-size: clamp(2.5em, 6.5vw, 2.5em);
     color: black;
     margin-bottom: 0px;
     margin-top: 0px;
 }
 
 .card h4 {
-    font-size: clamp(2em, 3vw, 2em);
+    font-size: clamp(2em, 6vw, 2em);
     color: black;
     margin-top: 0px;
     margin-bottom: 15px;
@@ -361,7 +363,26 @@ a {
     transform: translateY(-10px);
 }
 
-/*Recensiner */
+/* Footer */
+footer {
+    width: 100%;
+    bottom: 0;
+    background-color: black; 
+    text-align: center; 
+    padding: 10px 0; 
+}
+
+footer p {
+    color: white; 
+    margin: 0;
+    text-align: center;
+    font-weight: lighter;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: clamp(1em, 2vw, 1em);
+}
+
+/* Pop-up för feedback */
 .recension {
     display: flex;
     flex-direction: column;
@@ -383,8 +404,8 @@ a {
 }
 
 .feedback-icon img {
-    width: 50px;
-    height: 50px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     background-color: white;
     padding: 10px;
@@ -417,21 +438,23 @@ a {
 
 .popup-content h3 {
     margin-top: 0;
-    margin-bottom: 10px;
-    font-size: clamp(2.5em, 6vw, 2.5em);
+    margin-bottom: 20px;
+    font-size: clamp(2em, 5vw, 2em);
+    padding-top: 40px;
 }
 
 .popup-content p {
     margin-bottom: 20px;
-    font-size: clamp(2.5em, 5vw, 2.5em);
+    font-size: clamp(1.5em, 3vw, 1.5em);
+    color: black;
 }
 
 .feedback-link {
     text-decoration: none;
     color: black;
     font-weight: bold;
-    font-size: clamp(2.5em, 6vw, 2.5em);
-    margin-bottom: 10px;
+    font-size: clamp(2em, 5vw, 2em);
+    padding-bottom: 30px;
 }
 
 .close-btn {
@@ -439,7 +462,7 @@ a {
     font-weight: bold;
     cursor: pointer;
     position: absolute;
-    top: 0px; 
+    top: -15px; 
     right: 20px;  
     color: black;
 }
