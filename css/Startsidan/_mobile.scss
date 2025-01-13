@@ -38,29 +38,28 @@ header img {
 h1{
     transform: translateY(-50%);
     width: 100%;
-    text-align: center;
-    font-size: clamp(3.5em, 7.5vw, 3.5em); 
+    text-align: center;   
+    font-size: clamp(1.5em, 6vw, 4em);
     top: 40vw;  
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     position: absolute;
     z-index: 2;
     white-space: nowrap;
     padding-left: 10px;
     padding-right: 10px;
     font-weight: bolder;
+    margin-top: 40px;
 }
 
 h1 span{
     opacity: 0;
     display: inline-block;
     animation: animate 1s linear forwards;
-
 }
 
 .top-effect {
     height: 40px;
     background: #000;
-    padding-bottom: 30px;
 }
 
 video {
@@ -163,10 +162,10 @@ nav li {
     justify-content: center;
     text-decoration: none;
     color: white;
-    font-size: clamp(2.5em, 6.5vw, 2.5em); 
     position: relative;
     padding-left: 5px;
     padding-right: 5px;
+    font-size: clamp(1em, 3vw, 2em);
 }
 
 .link::before {
@@ -210,10 +209,11 @@ hr {
 
 header p {
     text-align: center;
-    font-size: clamp(1em, 4vw, 1em); 
+    font-size: clamp(1em, 3vw, 2em);
     padding-left: 20px;
     padding-right: 20px;
-    top: 60vw; 
+    margin-top: 5%;
+    top: 40vw; 
 }
 
 main {
@@ -225,7 +225,7 @@ main {
 main h2 {
     padding-left: 10px;
     text-align: center;
-    font-size: clamp(3em, 7vw, 3em); 
+    font-size: clamp(1.5em, 5vw, 4em);
     margin-bottom: 5px;
     margin-top: 50px;
     padding-left: 10px;
@@ -242,7 +242,7 @@ main p {
     padding-left: 20px;
     padding-right: 20px;
     margin-bottom: 10px;
-    font-size: clamp(1em, 4vw 1em);
+    font-size: clamp(1em, 3vw, 2em);
 }
 
 section {
@@ -273,14 +273,14 @@ section {
 }
 
 .card-still h3 {
-    font-size: clamp(2.5em, 6.5vw, 2.5em);
+    font-size: clamp(1.5em, 5vw, 4em);
     color: black;
     margin-bottom: 20px;
     margin-top: 20px;
 }
 
 .card-still h4 {
-    font-size: clamp(2em, 6vw, 2em);
+    font-size: clamp(1.5em, 5vw, 4em);
     color: black;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -321,7 +321,7 @@ a {
 }
 
 .card p {
-    font-size: clamp(1em, 4vw, 1em); 
+    font-size: clamp(1em, 3vw, 2em);
     color: black;
     margin-top: 0px;
 }
@@ -335,14 +335,14 @@ a {
 }
 
 .card h3 {
-    font-size: clamp(2.5em, 6.5vw, 2.5em);
+    font-size: clamp(1.5em, 5vw, 4em);
     color: black;
     margin-bottom: 0px;
     margin-top: 0px;
 }
 
 .card h4 {
-    font-size: clamp(2em, 6vw, 2em);
+    font-size: clamp(1.5em, 5vw, 4em);
     color: black;
     margin-top: 0px;
     margin-bottom: 15px;
