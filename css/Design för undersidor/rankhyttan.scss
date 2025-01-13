@@ -9,3 +9,42 @@
 @media screen and (min-width:1366px) {
     @import 'desktopDesign';
 }
+
+@media print {
+    @page {
+        margin: 20mm;
+    }
+
+    body {
+        background-color: white;
+        color: black;
+        font-size: 50%;
+    }
+
+    .gallery {
+        display: grid; /* Byt till grid-layout */
+        grid-template-columns: repeat(2, 1fr); /* Skapa två kolumner */
+        gap: 10px; /* Avstånd mellan bilder */
+        margin: 0 auto; /* Centrera galleriet */
+        width: 100%; /* Fyll sidan */
+    }
+
+    .image-container {
+        text-align: center; /* Centrera text och innehåll */
+    }
+
+    .image-container img {
+        width: 200px; /* Anpassa bredd för utskrift */
+        height: auto; /* Bevara bildens proportioner */
+        border-radius: 5px; /* Valfri design */
+    }
+
+    figcaption {
+        font-size: 12px; /* Gör texten under bilder mindre */
+    }
+
+    .material-symbols-outlined,
+    footer {
+        display: none !important;
+    }
+}

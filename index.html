@@ -61,9 +61,10 @@
                 <li><a href="mailto:historiskaroster@outlook.com" class="link">Kontakta oss</a></li>
             </ul>
         </nav>
-        <img src="image/original_big-logo_white-transparent.png" alt="Logo">
+        <img src="image/original_big-logo_white-transparent.png" class="logo-1" alt="Logo">
+        <img src="image/original_big-logo_black-transparent.png" class="logo-2" alt="Logo">
         <section class="top-effect">
-            <video id="myVideo" src="image/smoke.mp4" autoplay muted preload="none"></video> 
+            <video id="myVideo" src="image/smoke.mp4" autoplay muted preload="auto"></video> 
         </section>
         <h1>
             <span>H</span>
@@ -265,21 +266,23 @@
     </span>
 </main>
 
-    <footer>
-        <div id="feedback-icon" class="feedback-icon">
-            <img src="image/feedback_logo.png" alt="Feedback" loading="lazy">
-          </div>
-        
-          <div id="feedback-popup" class="feedback-popup">
-            <div class="popup-content">
-              <h3>Lämna feedback</h3>
-              <p>Vi tar gärna emot feedback från våra följare. Har du tips på något vi kan göra annorlunda eller något vi gör riktigt bra. Hör av er!</p>
-              <a href="mailto:historiskaroster@outlook.com" class="feedback-link">Klicka här!</a>
-              <span class="close-btn" id="close-btn">×</span>
-            </div>
-          </div>      
-    </footer>
+<footer>
+    <p>© 2024–<span id="current-year"></span> Historiska Röster. <br>Alla rättigheter förbehållna.</p>
 
-    <script src="main.js"></script>
+    <div id="feedback-icon" class="feedback-icon">
+        <img src="image/feedback_logo.png" alt="Feedback" />
+      </div>
+    
+      <div id="feedback-popup" class="feedback-popup">
+        <div class="popup-content">
+          <h3>Lämna feedback</h3>
+          <p>Vi tar gärna emot feedback från våra följare. Har du tips på något vi kan göra annorlunda eller något vi gör riktigt bra. Hör av er!</p>
+          <a href="mailto:historiskaroster@outlook.com" class="feedback-link">Klicka här!</a>
+          <span class="close-btn" id="close-btn">×</span>
+        </div>
+      </div>      
+</footer>
+
+<script src="main.js"></script>
 </body>
 </html>

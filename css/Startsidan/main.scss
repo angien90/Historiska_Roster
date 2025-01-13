@@ -9,3 +9,46 @@
 @media screen and (min-width:1366px) {
     @import 'desktop';
 }
+
+@media print {
+    @page {
+        margin: 20mm;
+    }
+    
+    body {
+        background: white !important;
+        color: black !important;
+    }
+
+    nav {
+        display: none !important; 
+    }
+    
+    .logo-1 {
+        display: none;
+    }
+
+    .logo-2 {
+        display: block;
+    }
+
+    .top-effect,
+    video {
+        display: none !important;
+    }
+
+    header h1 {
+        margin-top: 5px;
+    }
+
+    header p {
+        margin-top: 15%;
+        font-size: 1.5em;
+    }
+
+    .card-still,
+    .card {
+        width: 70%;
+        border: 3px solid black;
+    }   
+}

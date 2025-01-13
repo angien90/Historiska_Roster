@@ -37,3 +37,6 @@
         </iframe>
     `;
   }
+
+// BYTER UT ÅRTALET I FOOTERN AUTOMATISK
+document.getElementById("current-year").textContent = new Date().getFullYear();
