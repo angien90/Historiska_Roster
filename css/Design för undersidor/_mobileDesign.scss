@@ -42,7 +42,7 @@ body {
     padding-left: 30px;
     text-wrap: wrap;
     text-align: center;
-    font-size: clamp(3em, 8vw, 3em);
+    font-size: clamp(2.5em, 8vw, 2.5em);
 }
 
 /* Innehåll högst upp */
@@ -76,7 +76,7 @@ main h2 {
     margin-top: 30px;
     text-align: center;
     margin-bottom: 5px;
-    font-size: clamp(2.5em, 7vw, 2.5em);
+    font-size: clamp(2em, 7vw, 2em);
     text-wrap: wrap;
 }
 
@@ -86,7 +86,7 @@ main h3 {
     margin-top: 20px;
     text-align: center;
     margin-bottom: 10px;
-    font-size: clamp(2em, 6vw, 2em);
+    font-size: clamp(1.5em, 6vw, 1.5em);
     text-wrap: wrap;
 }
 
@@ -94,7 +94,7 @@ main h4 {
     padding-left: 10px;
     padding-right: 10px;
     text-align: center;
-    font-size: clamp(1.5em, 5vw, 1.5em);
+    font-size: clamp(1em, 5vw, 1em);
     text-wrap: wrap;
 }
 
@@ -104,7 +104,7 @@ main p {
     padding-right: 20px;
     margin-bottom: 30px;
     margin-top: 10px;
-    font-size: clamp(2em, 4vw, 2em);
+    font-size: clamp(1.7em, 4vw, 1.7em);
     font-family: "Amatic SC";
 }
 
