@@ -295,6 +295,28 @@ article {
     pointer-events: none;
 }
 
+/* Källförteckning */
+details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+  
+summary {
+    font-weight: bold;
+    font-size: 1.5em;
+    color: white;
+    margin-bottom: 10px;
+}
+  
+details a {
+    display: block; 
+}
+
+
 /* Footer */
 footer {
     width: 100%;
@@ -309,8 +331,8 @@ footer p {
     margin: 0;
     text-align: center;
     font-weight: lighter;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
     font-size: clamp(1em, 2vw, 1em);
 }
 
@@ -330,7 +352,7 @@ footer p {
 .feedback-icon {
     position: fixed;
     bottom: 20px;
-    right: 20px;
+    right: 10%;
     cursor: pointer;
     z-index: 1000;
 }
