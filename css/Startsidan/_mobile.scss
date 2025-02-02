@@ -2,21 +2,19 @@
     box-sizing: border-box;
 }
 
+/* Default styles (dark mode) */
 html, body {
     height: 100%;
     margin: 0;
+    padding: 0;
     display: flex;
     flex-direction: column;
-}
-
-/* Default styles (dark mode) */
-body {
-   
     background-color: black;
     color: white;
     font-family: "Caesar Dressing", serif;
 }
 
+/* Header */
 header {
     display: flex;
     flex-direction: column;
@@ -24,15 +22,58 @@ header {
     width: 100%;
 }
 
-.logo-2 {
-    display: none; 
+nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 0 10px;
+    width: 100%;
+    z-index: 2;
 }
 
-header img {
-    width: 30vw;
+nav ul {
+    display: flex;
+    justify-content:space-evenly;
+    list-style: none;
+    text-align: center;
+    padding: 0px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    width: 100%;
+}
+
+.link {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
     position: relative;
-    z-index: 2;
+    padding: 0 5px;
+    font-size: clamp(1em, 3vw, 2em);
+}
+
+.link::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: white;
+    transition: width 0.5s ease-in-out;
+}
+
+.link:hover::before {
+    width: 100%;
+}
+
+.logo-1 {
+    width: 30vw;
     margin-top: 10px;
+    z-index: 2;
+}
+
+.logo-2 {
+    display: none; 
 }
 
 h1{
@@ -40,44 +81,13 @@ h1{
     width: 100%;
     text-align: center;   
     font-size: clamp(1.5em, 6vw, 4em);
-    top: 40vw;  
-    margin-bottom: 20px;
+    top: 45vw;  
     position: absolute;
     z-index: 2;
     white-space: nowrap;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 0 10px;
     font-weight: bolder;
     margin-top: 40px;
-}
-
-h1 span{
-    opacity: 0;
-    display: inline-block;
-    animation: animate 1s linear forwards;
-}
-
-.top-effect {
-    height: 40px;
-    background: #000;
-}
-
-video {
-    width: 100%;
-    max-width: 100%;
-}
-
-@keyframes animate {
-    0%{
-        opacity: 0;
-        transform: rotateY(90deg);
-        filter: blur(10px);
-    }
-    100%{
-        opacity: 1;
-        transform: rotateY(0deg);
-        filter: blur(0px);
-    }
 }
 
 h1 span:nth-child(1){
@@ -132,55 +142,49 @@ h1 span:nth-child(17){
     animation-delay: 4.7s; //R
 }
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    gap: 30px;
-    padding-left: 10px;
-    padding-right: 10px;
-    width: 100%;
+h1 span{
+    opacity: 0;
+    display: inline-block;
+    animation: animate 1s linear forwards;
 }
 
-nav ul {
-    display: flex;
-    justify-content:space-evenly;
-    list-style: none;
+header p {
     text-align: center;
-    padding: 0px;
-    margin-bottom: 5px;
-    font-weight: bold;
-    width: 100%;
-}
-
-nav li {
-    position: relative; 
-    z-index:2 ;
-}
-
-.link {
-    display: flex;
-    justify-content: center;
-    text-decoration: none;
-    color: white;
-    position: relative;
-    padding-left: 5px;
-    padding-right: 5px;
     font-size: clamp(1em, 3vw, 2em);
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 5%;
+    top: 40vw; 
+    z-index: 2;
 }
 
-.link::before {
-    content: "";
+/* Rökeffekt */
+.top-effect {
+    height: 40px;
+    background: #000;
+}
+
+video {
+    width: 100%;
+    max-width: 100%;
     position: absolute;
-    bottom: 0;
+    top: 90px;
     left: 0;
-    width: 0%;
-    height: 2px;
-    background: white;
-    z-index: -1;
+    z-index: 1;
+    pointer-events: none;
 }
 
-.link:hover::before {
-    animation: fill 1s forwards;
+@keyframes animate {
+    0%{
+        opacity: 0;
+        transform: rotateY(90deg);
+        filter: blur(10px);
+    }
+    100%{
+        opacity: 1;
+        transform: rotateY(0deg);
+        filter: blur(0px);
+    }
 }
 
 @keyframes fill {
@@ -205,15 +209,6 @@ hr {
     width: 90%;
     position: relative;
     z-index: 2;
-}
-
-header p {
-    text-align: center;
-    font-size: clamp(1em, 3vw, 2em);
-    padding-left: 20px;
-    padding-right: 20px;
-    margin-top: 5%;
-    top: 40vw; 
 }
 
 main {
@@ -246,17 +241,17 @@ main p {
 }
 
 section {
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
+    display: grid;
     justify-content: center;
     align-items: center;
-    align-content: center;
+    grid-template-columns: 1fr; /* Alla kort centreras i en kolumn */
+    gap: 30px;
+    margin-top: 10px;
+    width: 100%;
 }
 
 .card-still {
     display: flex;
-    flex-direction: row;
     justify-content: center;
     width: 90%;
     height: auto;
@@ -269,7 +264,8 @@ section {
     transition: transform 0.3s, box-shadow 0.3s;
     overflow: hidden;
     text-align: center;
-    margin: 20px;   
+    align-items: center;
+    margin: 0 20px;   
 }
 
 .card-still h3 {
@@ -299,7 +295,6 @@ section {
 
 .card {
     display: flex;
-    flex-direction: row;
     justify-content: center;
     width: 90%;
     height: auto;
@@ -312,7 +307,8 @@ section {
     transition: transform 0.3s, box-shadow 0.3s;
     overflow: hidden;
     text-align: center;
-    margin: 20px;   
+    align-items: center;
+    margin: 0 20px;   
 }
 
 a {

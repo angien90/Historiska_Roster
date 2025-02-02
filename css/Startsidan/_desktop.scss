@@ -1,0 +1,31 @@
+header img {
+    width: 200px;
+}
+
+.logo-1 {
+    width: 20vw;
+    margin-top: 10px;
+    z-index: 2;
+}
+
+h1 {
+    top: 27vw;
+    font-size: 4em;
+}
+
+video {
+    top: 40px;
+}
+
+section {
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 20px;
+}
+
+main {
+    z-index: 2;
+}
+
+.first-section {
+    margin-top: 30px;
+}

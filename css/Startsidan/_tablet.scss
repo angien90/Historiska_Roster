@@ -1,29 +1,18 @@
-h1 {
-    top: 450px; 
-    font-size: 3em;
-}
-
 .link {
     font-size: 1em;
 }
 
-nav {
-    justify-content: space-evenly;
-    width: 100%;
-    padding-left: 30px;
-    padding-right: 30px;
-    margin-top: 0px;
-}
-
 nav ul {
-    font-size: 2em;
-    justify-content: space-evenly;
-    width: 100%;
+    font-size: 2em; 
 }
 
 header img {
     margin-top: 30px;
     width: 300px;
+}
+
+h1 {
+    font-size: 3em;
 }
 
 header p {
@@ -32,6 +21,10 @@ header p {
     margin-bottom: 50px;
     padding-left: 30px;
     padding-right: 30px;
+}
+
+video {
+    top: 190px;
 }
 
 main h2 {
@@ -44,28 +37,25 @@ main p {
 }
 
 section {
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 30px;
-    margin-top: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0px;
+    padding: 0 20px;
+    grid-auto-flow: dense;
 }
 
 .card-still {
-    width: 25%;
     height: auto;
-    flex-wrap: wrap;
-    position: relative;
-    z-index: 2;
-}
+    margin-bottom: 30px; 
+} 
+
 
 .card-still h3 {
     font-size: 2em;
-    margin-bottom: 10px;
-    
+     
 }
 
-.card-still h4 {
-    font-size: 1.5em;
+.card-still p {
+    font-size: 2em;
 }
 
 .card-still img {
@@ -74,17 +64,16 @@ section {
     max-height: none;
 }
 
-.card-still p {
-    margin-top: 0px;
-    font-size: 2em;
+.card-still h4 {
+    font-size: 1.5em;
 }
 
 .card {
-    width: 25%;
-    height: auto;
+    height: 500px;
     flex-wrap: wrap;
     position: relative;
     z-index: 2;
+    margin-bottom: 30px;
 }
 
 .card h3 {
