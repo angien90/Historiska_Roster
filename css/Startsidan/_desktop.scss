@@ -1,31 +1,65 @@
-header img {
-    width: 200px;
-}
-
 .logo-1 {
-    width: 20vw;
-    margin-top: 10px;
-    z-index: 2;
+    width: 300px;
 }
 
 h1 {
-    top: 27vw;
     font-size: 4em;
 }
 
-video {
-    top: 40px;
-}
-
-section {
-    grid-template-columns: repeat(3, 1fr);
-    margin-top: 20px;
+header p {
+    padding-left: 70px;
+    padding-right: 70px;
 }
 
 main {
     z-index: 2;
 }
 
-.first-section {
-    margin-top: 30px;
+section {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 20px; /* Om du vill ha avstånd mellan korten */
+    justify-content: center; /* Säkerställer att grid centreras */
+}
+
+.card-still,
+.card,
+.card-education {
+    grid-column: span 4; 
+}
+
+.card:last-child:nth-child(odd),
+.card-still:last-child:nth-child(odd),
+.card-education:last-child:nth-child(odd) {
+    grid-column: 5 / span 4; /* Börjar vid kolumn 5 och sträcker sig över 4 kolumner */
+    justify-self: center;
+}
+
+
+.card:nth-last-child(1):nth-child(odd),
+.card-still:nth-last-child(1):nth-child(odd),
+.card-education:nth-last-child(1):nth-child(odd) {
+    grid-column: 5 / span 4;
+}
+
+/* Om sista raden har exakt två kort och sektionen har bara två rader */
+section:has(.card:nth-child(4)):has(.card:nth-child(5)) .card:nth-last-child(2),
+section:has(.card-still:nth-child(4)):has(.card-still:nth-child(5)),
+section:has(.card-education:nth-child(4)):has(.card-education:nth-child(5)) {
+    grid-column: 3 / span 4; /* Första kortet centreras */
+}
+
+section:has(.card:nth-child(4)):has(.card:nth-child(5)) .card:nth-last-child(1),
+section:has(.card-still:nth-child(4)):has(.card-still:nth-child(5)),
+section:has(.card-education:nth-child(4)):has(.card-education:nth-child(5)) {
+    grid-column: 7 / span 4; /* Andra kortet centreras */
+}
+
+/* När det bara finns en rad */
+section:has(.card:nth-child(2):nth-last-child(1)) .card {
+    grid-column: 3 / span 4; /* Första kortet */
+}
+
+section:has(.card:nth-child(2):nth-last-child(1)) .card:nth-last-child(1) {
+    grid-column: 7 / span 4; /* Andra kortet */
 }
