@@ -1,34 +1,12 @@
-/* Pop-up för feedback */
-.feedback-icon {
-    bottom: 10px;
-    right: -10px;
-}
-
-.feedback-icon img {
-    width: 40%;
-    height: 40%;
-}
-
-.popup-content {
-    width: 60%;
-    height: 350px;
-}
-
 .popup-content h3 {
-    font-size: 3em;
-    margin-bottom: 50px;
+    padding-top: 20px;
 }
 
 .popup-content p {
-    font-size: 2em;
-    margin-bottom: 50px;
+    font-size: clamp(1.5em, 2vw, 1.5em);
 }
 
-.feedback-link {
-    font-size: 3em;
-}
-
-.close-btn {
-    font-size: 6em;
-    top: -10px; 
+.feedback-icon img {
+    width: 90px;
+    height: 90px;
 }

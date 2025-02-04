@@ -262,8 +262,6 @@ section {
     height: auto;
     border: 3px solid white;
     border-radius: 10px;
-    padding-right: 10px;
-    padding-left: 10px;
     flex-wrap: wrap;
     background-color: #fff;
     transition: transform 0.3s, box-shadow 0.3s;
@@ -306,19 +304,20 @@ section {
     margin-top: 0;
 }
 
+.card-still h4 {
+    margin-top: 0;
+}
+
 
 .card-still img,
 .card img,
 .card-education img  {
     width: 90%;
     height: 200px;
-    max-height: 200px;
     border-radius: 10px;
     object-fit: cover;
     margin-bottom: 10px;
 }
-
-
 
 .card-education img {
     height: 200px;

@@ -17,9 +17,6 @@ footer p {
     font-size: clamp(1em, 2vw, 1em);
 }
 
-/* Pop-up för feedback */
-
-
 .feedback-icon {
     position: fixed;
     bottom: 20px;
@@ -29,8 +26,8 @@ footer p {
 }
 
 .feedback-icon img {
-    width: 80px;
-    height: 80px;
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
     background-color: white;
     padding: 10px;
@@ -65,12 +62,12 @@ footer p {
     margin-top: 0;
     margin-bottom: 20px;
     font-size: clamp(2em, 5vw, 2em);
-    padding-top: 40px;
+    padding-top: 50px;
 }
 
 .popup-content p {
     margin-bottom: 20px;
-    font-size: clamp(1.5em, 3vw, 1.5em);
+    font-size: clamp(1.2em, 2vw, 1.2em);
     color: black;
 }
 
