@@ -3,6 +3,14 @@
   const feedbackIcon = document.getElementById("feedback-icon");
   const feedbackPopup = document.getElementById("feedback-popup");
   const closeBtn = document.getElementById("close-btn");
+  
+  document.addEventListener("DOMContentLoaded", function () {
+    const feedbackIcon = document.getElementById("feedback-icon");
+    if (!feedbackIcon) {
+        console.error("Footer har inte laddats in innan main.js körs!");
+        return;
+    }
+});
 
   // Öppna pop-up när man klickar på ikonen
   feedbackIcon.onclick = function() {
