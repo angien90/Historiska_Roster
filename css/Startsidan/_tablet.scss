@@ -84,37 +84,3 @@ section {
     width: 30%;
 }
 
-/* Pop-up för feedback */
-.feedback-icon {
-    bottom: 10px;
-    right: -10px;
-}
-
-.feedback-icon img {
-    width: 40%;
-    height: 40%;
-}
-
-.popup-content {
-    width: 60%;
-    height: 350px;
-}
-
-.popup-content h3 {
-    font-size: 3em;
-    margin-bottom: 50px;
-}
-
-.popup-content p {
-    font-size: 2em;
-    margin-bottom: 50px;
-}
-
-.feedback-link {
-    font-size: 3em;
-}
-
-.close-btn {
-    font-size: 6em;
-    top: -10px; 
-}

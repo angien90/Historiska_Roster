@@ -286,11 +286,38 @@
     </main>
 
     <div id="footer-container"></div>
-    <script>
-        fetch("footer.html")
-            .then(response => response.text())
-            .then(data => document.getElementById("footer-container").innerHTML = data);
-    </script>
+
+<script>
+    fetch("footer.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("footer-container").innerHTML = data;
+
+            // Lägg in JS-koden här eftersom footern nu finns i DOM
+            const feedbackIcon = document.getElementById("feedback-icon");
+            const feedbackPopup = document.getElementById("feedback-popup");
+            const closeBtn = document.getElementById("close-btn");
+
+            if (feedbackIcon && feedbackPopup && closeBtn) {
+                feedbackIcon.onclick = function () {
+                    feedbackPopup.style.display = "flex";
+                };
+
+                closeBtn.onclick = function () {
+                    feedbackPopup.style.display = "none";
+                };
+
+                window.onclick = function (event) {
+                    if (event.target === feedbackPopup) {
+                        feedbackPopup.style.display = "none";
+                    }
+                };
+            } else {
+                console.error("Ett eller flera element i feedback-popup kunde inte hittas.");
+            }
+        });
+</script>
+
 
     <script src="main.js"></script>
 </body>
