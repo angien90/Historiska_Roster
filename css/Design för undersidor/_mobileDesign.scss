@@ -27,7 +27,7 @@ body {
 .top-page span {
     font-size: clamp(3em, 7vw, 3em);
     padding-right: 20px;
-    padding-left: 20px;
+    padding-left: 10px;
     margin-top: 20px;
     color: white;
     position: absolute;
@@ -39,10 +39,10 @@ body {
     margin-top: 20px;
     margin-bottom: 0px;
     padding-right: 10px;
-    padding-left: 30px;
+    padding-left: 50px;
     text-wrap: wrap;
     text-align: center;
-    font-size: clamp(2.5em, 8vw, 2.5em);
+    font-size: clamp(2em, 8vw, 2em);
 }
 
 /* Innehåll högst upp */
@@ -140,11 +140,9 @@ main ul {
 
 main li {
     text-align: center;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
     margin-top: 10px;
-    font-size: clamp(2em, 4vw, 2em);
     font-family: "Amatic SC";
 }
 
