@@ -1,9 +1,36 @@
+body {
+    background-color: blue; // Temporär test-färg
+}
+
+.navbar {
+    height: 50px;
+}
+    
+.nav-links {
+    display: flex !important;  // Säkerställer att menyn syns
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    position: static; // Ta bort positionering från mobil-läget
+    background: none;
+    height: 40px;
+    top: 10px;
+}
+
+.hamburger {
+    display: none !important; /* Dölj hamburgarmenyn */
+}
+
 .link {
     font-size: 1em;
 }
 
 nav ul {
     font-size: 2em; 
+}
+
+.logo-1 {
+    top: 10px;
 }
 
 video {
