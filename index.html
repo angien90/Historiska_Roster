@@ -4,7 +4,9 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Historiska Röster</title>
-    
+        <meta name="description" content="Historiska Röster tar dig med på spännande utforskningar av historiska och paranormala platser. Följ med oss på YouTube, Instagram och TikTok för att uppleva historier från det förflutna.">
+        <meta name="keywords" content="spökhistoria, historiska platser, paranormala fenomen, historia, spökjakt, svenska sägner">
+
         <link href="css/Startsidan/main.css" rel="stylesheet" />
     
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,34 +29,31 @@
 
         <script type="application/ld+json">
             {
-                "@context": "https://schema.org/",
-                "@type": "WebPage",
-                "name": "Historiska Röster",
-                "url": "https://historiskaroster.se/",
-                "headline": "Historiska Röster",
-                "image": "image/logga_vit_text_svart_bakgrund.png",
-                "description": "Följ med på en fascinerande resa genom tid och rum med Historiska Röster. Vi är spök- och historiejägare som utforskar historiska platser, där mörka berättelser och övernaturliga fenomen möts. Genom vår passion för det okända och vår djupa kunskap om historia söker vi efter de röster som har blivit kvar från en svunnen tid. Är du redo att upptäcka det okända och höra historier som inte berättas i läroböcker? Följ med oss på våra äventyr och lär känna de spöklika berättelser som döljer sig i historiens skuggor.",
-                "datePublished": "2024-12-30",
-                "contactPoint": {
-                    "@type": "ContactPoint",
-                    "name": "Historiska Röster",
-                    "email": "historiskaroster@outlook.com",
-                    "contactType": "Customer Service",
-                    "areaServed": "SE",
-                    "availableLanguage": "Swedish"
-                },
-                "sameAs": [
-                    "https://www.instagram.com/historiskaroster?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-                    "https://www.youtube.com/@HistoriskaR%C3%B6ster"
-                    ]
-            }
+                "@context": "https://schema.org",
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Hem",
+                "item": "https://historiskaroster.se/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Om oss",
+                "item": "https://historiskaroster.se/about_us.html"
+                }
+            ]
+        }
         </script>
     </head>
 
 <body>
     <header>
-        <nav>
-            <ul>
+        <nav class="navbar">
+            <button class="hamburger" id="hamburger-btn" aria-label="Meny">☰</button> 
+            <ul class="nav-links"> 
                 <li><a href="about_us.html" class="link">Om oss</a></li>
                 <li><a href="https://www.youtube.com/@HistoriskaR%C3%B6ster" class="link">YouTube</a></li>
                 <li><a href="https://www.instagram.com/historiskaroster" class="link">Instagram</a></li>
@@ -62,8 +61,9 @@
                 <li><a href="mailto:historiskaroster@outlook.com" class="link">Kontakta oss</a></li>
             </ul>
         </nav>
-        <img src="image/original_big-logo_white-transparent.png" class="logo-1" alt="Logo">
-        <img src="image/original_big-logo_black-transparent.png" class="logo-2" alt="Logo">
+
+        <img src="image/logo/white-logo-transparent.png" class="logo-1" alt="Logo">
+        <img src="image/logo/black-logo-transperent.png" class="logo-2" alt="Logo">
         <section class="top-effect">
             <video id="myVideo" src="image/smoke.mp4" autoplay muted preload="auto"></video> 
         </section>
@@ -297,19 +297,14 @@
         .then(data => {
             document.getElementById("footer-container").innerHTML = data;
 
-            // Lägg in JS-koden här eftersom footern nu finns i DOM
+            // Nu finns footern i DOM:en, så vi kan lägga till event listeners
             const feedbackIcon = document.getElementById("feedback-icon");
             const feedbackPopup = document.getElementById("feedback-popup");
             const closeBtn = document.getElementById("close-btn");
 
             if (feedbackIcon && feedbackPopup && closeBtn) {
-                feedbackIcon.onclick = function () {
-                    feedbackPopup.style.display = "flex";
-                };
-
-                closeBtn.onclick = function () {
-                    feedbackPopup.style.display = "none";
-                };
+                feedbackIcon.onclick = () => feedbackPopup.style.display = "flex";
+                closeBtn.onclick = () => feedbackPopup.style.display = "none";
 
                 window.onclick = function (event) {
                     if (event.target === feedbackPopup) {
@@ -319,9 +314,22 @@
             } else {
                 console.error("Ett eller flera element i feedback-popup kunde inte hittas.");
             }
-        });
+
+            // Uppdatera årtalet i footern
+            const yearElement = document.getElementById("current-year");
+            if (yearElement) {
+                yearElement.textContent = new Date().getFullYear();
+            }
+
+            // Ladda main.js EFTER att footern är inladdad
+            const script = document.createElement("script");
+            script.src = "main.js";
+            document.body.appendChild(script);
+        })
+        .catch(error => console.error("Fel vid inladdning av footer:", error));
 </script>
 
 <script src="main.js"></script>
+
 </body>
 </html>

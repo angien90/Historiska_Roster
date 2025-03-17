@@ -23,56 +23,75 @@ header {
     position: relative;
 }
 
-nav {
+/* Grundläggande navbar */
+.navbar {
     display: flex;
     justify-content: space-between;
-    gap: 30px;
-    padding: 0 10px;
-    width: 100%;
-    z-index: 2;
-}
-
-nav ul {
-    display: flex;
-    justify-content:space-evenly;
-    list-style: none;
-    text-align: center;
-    padding: 0px;
-    margin-bottom: 5px;
-    font-weight: bold;
-    width: 100%;
-}
-
-.link {
-    display: inline-block;
-    text-decoration: none;
-    color: white;
+    align-items: center;
+    padding: 10px 20px;
     position: relative;
-    padding: 0 5px;
-    font-size: clamp(1em, 3vw, 2em);
-}
-
-.link::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0%;
-    height: 2px;
-    background: white;
-    transition: width 0.5s ease-in-out;
-}
-
-.link:hover::before {
     width: 100%;
+    background-color: black;
 }
 
+/* Dölj menyn som standard */
+.nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    justify-content: top;
+    align-items: center;
+    gap: 20px;
+    z-index: 1001;
+}
+
+/* När hamburgermenyn är aktiv */
+.nav-links.active {
+    display: flex;
+    list-style-type: none;
+    height: 100vh;
+    top: 0px;
+    z-index: 999;
+    padding-top: 40px;
+}
+
+/* --- Mobilanpassning (hamburgermeny) --- */
+.hamburger {
+    display: block; /* Visa endast i mobil */
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px; /* Lägg till lite padding för att göra knappen större */
+    border-radius: 5px; /* Gör hörnen runda */
+}
+
+.hamburger.active {
+    transform: rotate(90deg);
+}
+
+/* Stil för länkar */
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 1.5rem;
+}
+
+/* Logga */
 .logo-1 {
     width: 30vw;
-    margin-top: 10px;
     margin-bottom: 10px;
     z-index: 2;
     position: relative;
+    top: -30px;
 }
 
 .logo-2 {
@@ -90,8 +109,7 @@ h1{
     padding: 0 10px;
     font-weight: bolder;
     margin-top: 0;
-    margin-bottom: 0;
-    
+    margin-bottom: 0;   
 }
 
 h1 span:nth-child(1){
