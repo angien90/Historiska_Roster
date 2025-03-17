@@ -28,21 +28,53 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 10px 20px;
     position: relative;
     width: 100%;
     background-color: black;
 }
 
-/* Navigationslänkar - visas normalt i tablet/desktop */
+/* Dölj menyn som standard */
 .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    justify-content: top;
+    align-items: center;
+    gap: 20px;
+    z-index: 1001;
+}
+
+/* När hamburgermenyn är aktiv */
+.nav-links.active {
     display: flex;
-    list-style: none;
-    gap: 15px;
-    padding: 0;
-    margin: 0;
+    list-style-type: none;
+    height: 100vh;
+    top: 0px;
+    z-index: 999;
+    padding-top: 40px;
+}
+
+/* --- Mobilanpassning (hamburgermeny) --- */
+.hamburger {
+    display: block; /* Visa endast i mobil */
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px; /* Lägg till lite padding för att göra knappen större */
+    border-radius: 5px; /* Gör hörnen runda */
+}
+
+.hamburger.active {
+    transform: rotate(90deg);
 }
 
 /* Stil för länkar */
@@ -50,55 +82,16 @@ header {
     color: white;
     text-decoration: none;
     padding: 10px;
+    font-size: 1.5rem;
 }
 
-/* Hamburgarmenyn - DOLD på större skärmar */
-.hamburger {
-    display: none; 
-    font-size: 30px;
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
-    z-index: 1000;
-}
-
-/* --- Mobilanpassning (hamburgermeny) --- */
-.hamburger {
-    display: block; /* Visa endast i mobil */
-}
-
-/* Dölj menyn som standard */
-.nav-links {
-    display: none;
-    flex-direction: column;
-    position: fixed;
-    top: 50px;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.95);
-    justify-content: top;
-    align-items: center;
-    gap: 20px;
-    z-index: 999;
-}
-
-/* När hamburgermenyn är aktiv */
-.nav-links.active {
-    display: flex;
-}
-
-.hamburger.active {
-    transform: rotate(90deg);
-}
-
+/* Logga */
 .logo-1 {
     width: 30vw;
     margin-bottom: 10px;
     z-index: 2;
     position: relative;
-    top: -20px;
+    top: -30px;
 }
 
 .logo-2 {
@@ -116,8 +109,7 @@ h1{
     padding: 0 10px;
     font-weight: bolder;
     margin-top: 0;
-    margin-bottom: 0;
-    
+    margin-bottom: 0;   
 }
 
 h1 span:nth-child(1){

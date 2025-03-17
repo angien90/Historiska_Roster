@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Historiska Röster</title>
     
-        <link href="css/Startsidan/main.css?v=1.0" rel="stylesheet" />
+        <link href="css/Startsidan/main.css" rel="stylesheet" />
     
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -54,8 +54,8 @@
 <body>
     <header>
         <nav class="navbar">
-            <button class="hamburger" id="hamburger-btn" aria-label="Meny">☰</button>
-            <ul class="nav-links">
+            <button class="hamburger" id="hamburger-btn" aria-label="Meny">☰</button> 
+            <ul class="nav-links"> 
                 <li><a href="about_us.html" class="link">Om oss</a></li>
                 <li><a href="https://www.youtube.com/@HistoriskaR%C3%B6ster" class="link">YouTube</a></li>
                 <li><a href="https://www.instagram.com/historiskaroster" class="link">Instagram</a></li>
@@ -63,6 +63,7 @@
                 <li><a href="mailto:historiskaroster@outlook.com" class="link">Kontakta oss</a></li>
             </ul>
         </nav>
+
         <img src="image/logo/white-logo-transparent.png" class="logo-1" alt="Logo">
         <img src="image/logo/black-logo-transperent.png" class="logo-2" alt="Logo">
         <section class="top-effect">
@@ -298,19 +299,14 @@
         .then(data => {
             document.getElementById("footer-container").innerHTML = data;
 
-            // Lägg in JS-koden här eftersom footern nu finns i DOM
+            // Nu finns footern i DOM:en, så vi kan lägga till event listeners
             const feedbackIcon = document.getElementById("feedback-icon");
             const feedbackPopup = document.getElementById("feedback-popup");
             const closeBtn = document.getElementById("close-btn");
 
             if (feedbackIcon && feedbackPopup && closeBtn) {
-                feedbackIcon.onclick = function () {
-                    feedbackPopup.style.display = "flex";
-                };
-
-                closeBtn.onclick = function () {
-                    feedbackPopup.style.display = "none";
-                };
+                feedbackIcon.onclick = () => feedbackPopup.style.display = "flex";
+                closeBtn.onclick = () => feedbackPopup.style.display = "none";
 
                 window.onclick = function (event) {
                     if (event.target === feedbackPopup) {
@@ -320,9 +316,22 @@
             } else {
                 console.error("Ett eller flera element i feedback-popup kunde inte hittas.");
             }
-        });
+
+            // Uppdatera årtalet i footern
+            const yearElement = document.getElementById("current-year");
+            if (yearElement) {
+                yearElement.textContent = new Date().getFullYear();
+            }
+
+            // Ladda main.js EFTER att footern är inladdad
+            const script = document.createElement("script");
+            script.src = "main.js";
+            document.body.appendChild(script);
+        })
+        .catch(error => console.error("Fel vid inladdning av footer:", error));
 </script>
 
 <script src="main.js"></script>
+
 </body>
 </html>

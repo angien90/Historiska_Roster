@@ -1,24 +1,20 @@
-body {
-    background-color: blue; // Temporär test-färg
-}
-
-.navbar {
-    height: 50px;
-}
-    
 .nav-links {
-    display: flex !important;  // Säkerställer att menyn syns
+    display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    position: static; // Ta bort positionering från mobil-läget
     background: none;
-    height: 40px;
+    gap: 15px;
+    padding: 0;
+    margin: 0;
+    position: absolute; 
     top: 10px;
+    height: auto;
+    list-style: none;  
 }
 
 .hamburger {
-    display: none !important; /* Dölj hamburgarmenyn */
+    display: none; 
 }
 
 .link {
@@ -30,19 +26,21 @@ nav ul {
 }
 
 .logo-1 {
-    top: 10px;
+    top: 40px;
 }
 
 video {
-    top: 200px;
+    top: 150px;
 }
 
 h1 {
     font-size: 3em;
+    top: 50px;
 }
 
 header p {
     font-size: 2em;
+    top: 30px;
 }
 
 main h2 {
