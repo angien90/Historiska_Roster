@@ -17,6 +17,16 @@ footer p {
     font-size: clamp(1em, 2vw, 1em);
 }
 
+.comercial {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
 .feedback-icon {
     position: fixed;
     bottom: 20px;
