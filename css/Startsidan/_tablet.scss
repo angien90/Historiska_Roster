@@ -41,6 +41,12 @@ h1 {
 header p {
     font-size: 2em;
     top: 30px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+hr {
+    margin-top: 30px;
 }
 
 main h2 {
@@ -53,6 +59,7 @@ main p {
     font-size: 2em;
     position: relative;
     z-index: 2;
+    margin-bottom: 40px;
 }
 
 section {
