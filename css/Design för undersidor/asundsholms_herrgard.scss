@@ -1,0 +1,28 @@
+@import 'resetDesign';
+
+@import 'mobileDesign';
+
+@media screen and (min-width:1024px) {
+    @import 'tabletDesign';
+}
+
+@media screen and (min-width:1366px) {
+    @import 'desktopDesign';
+}
+
+@media print {
+    @page {
+        margin: 20mm;
+    }
+
+    body {
+        background-color: white;
+        color: black;
+        font-size: 50%;
+    }
+
+    .material-symbols-outlined,
+    footer {
+        display: none !important;
+    }
+}
