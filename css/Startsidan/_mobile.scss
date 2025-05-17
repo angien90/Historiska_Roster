@@ -87,7 +87,7 @@ header {
 
 /* Logga */
 .logo-1 {
-    width: 30vw;
+    width: 40vw;
     margin-bottom: 10px;
     z-index: 2;
     position: relative;
@@ -262,18 +262,14 @@ main p {
 
 section {
     display: grid;
-    justify-content: center;
-    align-items: center;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-    margin-top: 10px;
-    width: 100%;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    justify-items: center;
+    padding: 0 20px;
 }
 
-.card-still, 
 .card,
 .card-education {
-    grid-column: 1 / span 2;
     display: block;
     justify-content: center;
     width: 90%;
@@ -289,8 +285,7 @@ section {
     align-content: center;
     margin: 0 auto; 
 }
-
-.card-still h3, 
+ 
 .card h3,
 .card-education h3 {
     font-size: clamp(1.5em, 5vw, 4em);
@@ -308,7 +303,6 @@ section {
     margin-bottom: 0px;
 }
 
-.card-still h4,
 .card h4,
 .card-education h4 {
     font-size: clamp(1em, 3vw, 3em);
@@ -322,12 +316,6 @@ section {
     margin-top: 0;
 }
 
-.card-still h4 {
-    margin-top: 0;
-}
-
-
-.card-still img,
 .card img,
 .card-education img  {
     width: 90%;
@@ -335,10 +323,6 @@ section {
     border-radius: 10px;
     object-fit: cover;
     margin-bottom: 10px;
-}
-
-.card-education img {
-    height: 200px;
 }
 
 .card a, 
@@ -369,10 +353,12 @@ section {
     margin-top: 0px;
 }
 
+// Hover effekt på korten
 .card:hover {
     transform: translateY(-10px);
 }
 
+// Recension
 .recension {
     display: flex;
     flex-direction: column;

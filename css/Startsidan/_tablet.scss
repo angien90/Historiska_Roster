@@ -63,46 +63,37 @@ main p {
 }
 
 section {
-    grid-template-columns: repeat(8, 1fr);
-    gap: 0px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-items: center;
     padding: 0 20px;
-    grid-auto-flow: dense;
+}
+
+section > *:nth-last-child(1):nth-child(odd) {
+    margin: 0 auto;
 }
 
 .card,
-.card-still,
-.card-education {
-    grid-column: span 4;
+.card-education { 
     margin-bottom: 30px;
 }
 
-.card:last-child:nth-child(odd),
-.card-still:last-child:nth-child(odd),
-.card-education:last-child:nth-child(odd) {
-    grid-column: 3 / span 4;
-    justify-self: center;
-}
-
 .card h3, 
-.card-still h3,
 .card-education h3 {
     font-size: 2em; 
 }
 
-.card-still h4,
 .card h4,
 .card-education h4 {
     font-size: 1.5em;
 }
 
-
-.card-still p,
 .card p,
 .card-education p {
     font-size: 1.5em;
 }
 
-.card-still img,
 .card img {
     height: 300px;
 }

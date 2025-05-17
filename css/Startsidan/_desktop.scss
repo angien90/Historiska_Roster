@@ -22,57 +22,16 @@ main {
 
 section {
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    gap: 20px; /* Om du vill ha avstånd mellan korten */
-    justify-content: center; /* Säkerställer att grid centreras */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-items: center;
+    padding: 0 20px;
+}
+
+section > *:nth-last-child(1):nth-child(3n+1) {
+    justify-self: center;
 }
 
 .recension img {
     width: 30%;
-}
-
-.card-still,
-.card,
-.card-education {
-    grid-column: span 4; 
-}
-
-.card:last-child:nth-child(odd),
-.card-still:last-child:nth-child(odd),
-.card-education:last-child:nth-child(odd) {
-    grid-column: 5 / span 4; /* Börjar vid kolumn 5 och sträcker sig över 4 kolumner */
-    justify-self: center;
-}
-
-.card:nth-last-child(1):nth-child(odd),
-.card-still:nth-last-child(1):nth-child(odd),
-.card-education:nth-last-child(1):nth-child(odd) {
-    grid-column: 5 / span 4;
-    justify-self: center;
-}
-
-/* Om sista raden har exakt två kort och sektionen har bara två rader */
-section:has(.card:nth-child(4)):has(.card:nth-child(5)) .card:nth-last-child(2),
-section:has(.card-still:nth-child(4)):has(.card-still:nth-child(5)),
-section:has(.card-education:nth-child(4)):has(.card-education:nth-child(5)) {
-    grid-column: 3 / span 4; /* Första kortet centreras */
-    justify-self: center;
-}
-
-section:has(.card:nth-child(4)):has(.card:nth-child(5)) .card:nth-last-child(1),
-section:has(.card-still:nth-child(4)):has(.card-still:nth-child(5)),
-section:has(.card-education:nth-child(4)):has(.card-education:nth-child(5)) {
-    grid-column: 7 / span 4; /* Andra kortet centreras */
-    justify-self: center;
-}
-
-/* När det bara finns en rad */
-section:has(.card:nth-child(2):nth-last-child(1)) .card {
-    grid-column: 3 / span 4; /* Första kortet */
-    justify-self: center;
-}
-
-section:has(.card:nth-child(2):nth-last-child(1)) .card:nth-last-child(1) {
-    grid-column: 7 / span 4; /* Andra kortet */
-    justify-self: center;
 }

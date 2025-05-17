@@ -1,8 +1,3 @@
-html, body {
-    height: 100%; /* Ger full höjd på sidan */
-    margin: 0; /* Ta bort oönskade marginaler */
-}
-
 /* Default styles (dark mode) */
 body {
     display: flex;
@@ -11,6 +6,8 @@ body {
     background-color: black;
     color: white;
     font-family: "Caesar Dressing", serif;
+    height: 100%; 
+    margin: 0;
 }
 
 /* Sidnamn och pil tillbaka */
@@ -64,9 +61,11 @@ header p {
 header img {
     margin: auto;
     width: 80%;
+    max-width: 600px;
     height: auto;  
     border-radius: 5px;
     margin-top: 30px;
+    
 }
 
 /* Huvudinnehåll */
@@ -98,7 +97,7 @@ main h4 {
     text-wrap: wrap;
 }
 
-main p {
+main p, q {
     text-align: center;
     padding-left: 20px;
     padding-right: 20px;
@@ -108,9 +107,18 @@ main p {
     font-family: "Amatic SC";
 }
 
+/* Quotes i brödtext t.ex. Gathenhielmska husets sida */
+main q {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+}
+
 /* Länkningar direkt i brödtext */
 .link {
     color: white; 
+    font-weight: bold;
+    text-decoration: underline;
 }
 
 a {
@@ -144,20 +152,6 @@ main li {
     margin-right: 20px;
     margin-top: 10px;
     font-family: "Amatic SC";
-}
-
-/* Quotes i brödtext t.ex. Gathenhielmska husets sida */
-main q {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    padding-left: 10px;
-    padding-right: 10px;
-    margin-bottom: 30px;
-    margin-top: 10px;
-    font-size: clamp(2em, 4vw, 2em);
-    font-family: "Amatic SC";
-    font-weight: bold;
 }
 
 /* Familjeträd på Frammegården */

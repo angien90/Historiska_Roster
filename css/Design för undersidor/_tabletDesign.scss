@@ -16,8 +16,6 @@ header p {
 }
 
 header img {
-    width: auto;
-    height: 400px;
     margin-bottom: 20px;
 }
 
@@ -35,7 +33,7 @@ main h4 {
     font-size: 2em;
 }
 
-main p {
+main p, q {
     font-size: 2em;
     padding-left: 40px;
     padding-right: 40px;
@@ -72,10 +70,6 @@ main ul {
 }
 
 main li {
-    font-size: 1em;
-}
-
-main q {
     font-size: 1em;
 }
 
