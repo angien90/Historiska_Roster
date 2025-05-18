@@ -43,7 +43,7 @@ header {
     left: 0;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.95);
-    justify-content: top;
+    justify-content: flex-start;
     align-items: center;
     gap: 20px;
     z-index: 1001;
@@ -77,6 +77,11 @@ header {
     transform: rotate(90deg);
 }
 
+.hamburger:focus,
+.nav-links a:focus {
+    outline: 2px solid white;
+}
+
 /* Stil för länkar */
 .nav-links a {
     color: white;
@@ -98,18 +103,20 @@ header {
     display: none; 
 }
 
-h1{
+h1 {
     transform: translateY(-50%);
     width: 100%;
-    text-align: center;   
+    text-align: center;
     font-size: clamp(1.5em, 4vw, 3em);
     position: relative;
     z-index: 2;
-    white-space: nowrap;
+    white-space: normal;
     padding: 0 10px;
     font-weight: bolder;
     margin-top: 0;
-    margin-bottom: 0;   
+    margin-bottom: 0;
+    word-break: break-word;
+    overflow-wrap: break-word;
 }
 
 h1 span:nth-child(1){
@@ -175,7 +182,6 @@ header p {
     font-size: clamp(1em, 3vw, 2em);
     padding-left: 20px;
     padding-right: 20px;
-    margin-top: 10;
     z-index: 2;
     position: relative;
 }
@@ -192,7 +198,7 @@ video {
     width: 100%;
     max-width: 100%;
     position: absolute;
-    top: 90px;
+    top: 150px;
     left: 0;
     z-index: 1;
     pointer-events: none;
@@ -228,7 +234,6 @@ video {
 }
 
 hr {
-    line-break: normal;
     color: white;
     width: 90%;
     position: relative;
@@ -285,6 +290,7 @@ section {
     align-content: center;
     margin: 0 auto; 
 }
+
  
 .card h3,
 .card-education h3 {
@@ -353,12 +359,12 @@ section {
     margin-top: 0px;
 }
 
-// Hover effekt på korten
+/* Hover effekt på korten */
 .card:hover {
     transform: translateY(-10px);
 }
 
-// Recension
+/* Recension */
 .recension {
     display: flex;
     flex-direction: column;

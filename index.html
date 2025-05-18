@@ -87,9 +87,6 @@
 
         <img src="image/logo/white-logo-transparent.png" class="logo-1" alt="Logo">
         <img src="image/logo/black-logo-transperent.png" class="logo-2" alt="Logo">
-        <section class="top-effect">
-            <video id="myVideo" src="image/smoke.mp4" autoplay muted preload="auto"></video> 
-        </section>
         <h1>
             <span>H</span>
             <span>I</span>
@@ -109,6 +106,9 @@
             <span>E</span>
             <span>R</span>
         </h1>
+        <section class="top-effect">
+        <video id="myVideo" src="image/smoke.mp4" autoplay muted preload="auto"></video> 
+        </section>
         <p>Låt oss ta dig med på en resa genom tid och rum, där gränserna mellan det kända och okända suddas ut.</p>
     <hr>
     </header>
@@ -362,7 +362,7 @@
         </article>
     </section>  
 
-    <h2>Våra recensioner</h2>
+    <h2>Recensioner</h2>
        <span class="recension">
         <img src="image/Recension_hemsokta_museet.png" alt="Recension av Historiska Röster från det hemsökta museet" loading="lazy">
         <img src="image/Recension_hjortsberga.png" alt="Recension av Historiska Röster från det Hjortberga prästgård" loading="lazy">
@@ -372,44 +372,19 @@
 <div id="footer-container"></div>
 
 <script>
+    /* Footer */
     fetch("footer.html")
         .then(response => response.text())
         .then(data => {
             document.getElementById("footer-container").innerHTML = data;
 
-            // Nu finns footern i DOM:en, så vi kan lägga till event listeners
-            const feedbackIcon = document.getElementById("feedback-icon");
-            const feedbackPopup = document.getElementById("feedback-popup");
-            const closeBtn = document.getElementById("close-btn");
-
-            if (feedbackIcon && feedbackPopup && closeBtn) {
-                feedbackIcon.onclick = () => feedbackPopup.style.display = "flex";
-                closeBtn.onclick = () => feedbackPopup.style.display = "none";
-
-                window.onclick = function (event) {
-                    if (event.target === feedbackPopup) {
-                        feedbackPopup.style.display = "none";
-                    }
-                };
-            } else {
-                console.error("Ett eller flera element i feedback-popup kunde inte hittas.");
-            }
-
-            // Uppdatera årtalet i footern
-            const yearElement = document.getElementById("current-year");
-            if (yearElement) {
-                yearElement.textContent = new Date().getFullYear();
-            }
-
-            // Ladda main.js EFTER att footern är inladdad
+            // Ladda main.js EFTER att footern är i DOM:en
             const script = document.createElement("script");
             script.src = "main.js";
             document.body.appendChild(script);
         })
         .catch(error => console.error("Fel vid inladdning av footer:", error));
 </script>
-
-<script src="main.js"></script>
 
 </body>
 </html>
