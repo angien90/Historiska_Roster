@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Annas Bed & Kitchen - Historiska Röster</title>
     
-    <link href="css/Design för undersidor/annas_bed_and_kitchen.css" rel="stylesheet" />
+    <link href="css/Design för undersidor/sidor.css" rel="stylesheet" />
     
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=undo" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -122,8 +122,8 @@
         </span>
 
         <h2>Vad besökare sägs ha upplevt</h2>
-        <p>Flera oberoende gäster som besöker vanrdhemmet berättar för Pia efter sin vistelse att dom är inte ensamna i huset utan de finns fler osynliga boende där.</p>
-        <p>Pia säger själv att hon inte är ensm utan har sällskap och märker av lite småsaker i huset. Pia kallar dessa Nils, Oscar och Berta.</p>
+        <p>Flera oberoende gäster som besöker vandrarhemmet berättar för Pia efter sin vistelse att dom är inte ensamma i huset utan de finns fler osynliga boende där.</p>
+        <p>Pia säger själv att hon inte är ensam utan har sällskap och märker av lite småsaker i huset. Pia kallar dessa Nils, Oscar och Berta.</p>
         <p>Det sägs att vinden är där man upplever mest aktivitet</p>
 
         <hr>
@@ -152,31 +152,12 @@
             .then(data => {
                 document.getElementById("footer-container").innerHTML = data;
 
-                // Lägg in JS-koden här eftersom footern nu finns i DOM
-                const feedbackIcon = document.getElementById("feedback-icon");
-                const feedbackPopup = document.getElementById("feedback-popup");
-                const closeBtn = document.getElementById("close-btn");
-
-                if (feedbackIcon && feedbackPopup && closeBtn) {
-                    feedbackIcon.onclick = function () {
-                        feedbackPopup.style.display = "flex";
-                    };
-
-                    closeBtn.onclick = function () {
-                        feedbackPopup.style.display = "none";
-                    };
-
-                    window.onclick = function (event) {
-                        if (event.target === feedbackPopup) {
-                            feedbackPopup.style.display = "none";
-                        }
-                    };
-                } else {
-                    console.error("Ett eller flera element i feedback-popup kunde inte hittas.");
-                }
-            });
+                // Ladda main.js EFTER att footern är i DOM:en
+                const script = document.createElement("script");
+                script.src = "main.js";
+                document.body.appendChild(script);
+            })
+            .catch(error => console.error("Fel vid inladdning av footer:", error));
     </script>
-
-    <script src="main.js"></script>
 </body>
 </html>

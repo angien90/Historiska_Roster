@@ -8,7 +8,7 @@
     <meta name="keywords" content="Mysterium Mässan, andlighet, meditation, healing, tarot, astrologi, paranormalt, spirituella mässor">
     
     <link rel="canonical" href="https://historiskaroster.se/mysterium-massan">
-    <link href="css/Design för undersidor/mysteriummassan.css" rel="stylesheet" />
+    <link href="css/Design för undersidor/sidor.css" rel="stylesheet" />
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -67,7 +67,7 @@
             <h1>Mysterium Mässan & Beyond Life Party</h1>
         </span>
         <p>Historiska Röster besökte Mysterium Mässan och Beyond Life Party i november 2024</p>
-        <img src="image/Mysterium_massan.jpg" alt="Mysterium Mässan" width="400">
+        <img src="image/mysterium_massan/Mysterium_massan.jpg" alt="Mysterium Mässan" width="400">
     </header>
 
     <main>
@@ -81,7 +81,7 @@
         <h2>Se vår dokumentär från Mässan & partyt 2024</h2>
         <article>
             <div class="custom-thumbnail" onclick="replaceWithIframe()">
-                <img src="image/beyond_life_party.jpg?text=Min+Thumbnail" alt="Förhandsgranskningsbild">
+                <img src="image/mysterium_massan/beyond_life_party.jpg" alt="Förhandsgranskningsbild">
                 <div class="play-button">▶</div>
             </div>
         </article>
@@ -94,38 +94,18 @@
 
     <div id="footer-container"></div>
 
-<script>
-    fetch("footer.html")
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById("footer-container").innerHTML = data;
+    <script>
+        fetch("footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer-container").innerHTML = data;
 
-            // Lägg in JS-koden här eftersom footern nu finns i DOM
-            const feedbackIcon = document.getElementById("feedback-icon");
-            const feedbackPopup = document.getElementById("feedback-popup");
-            const closeBtn = document.getElementById("close-btn");
-
-            if (feedbackIcon && feedbackPopup && closeBtn) {
-                feedbackIcon.onclick = function () {
-                    feedbackPopup.style.display = "flex";
-                };
-
-                closeBtn.onclick = function () {
-                    feedbackPopup.style.display = "none";
-                };
-
-                window.onclick = function (event) {
-                    if (event.target === feedbackPopup) {
-                        feedbackPopup.style.display = "none";
-                    }
-                };
-            } else {
-                console.error("Ett eller flera element i feedback-popup kunde inte hittas.");
-            }
-        });
-</script>
-
-
-    <script src="main.js"></script>
+                // Ladda main.js EFTER att footern är i DOM:en
+                const script = document.createElement("script");
+                script.src = "main.js";
+                document.body.appendChild(script);
+            })
+            .catch(error => console.error("Fel vid inladdning av footer:", error));
+    </script>
 </body>
 </html>

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hemsökta Museet - Historiska Röster</title>
 
-    <link href="css/Design för undersidor/hemsoktamuseet.css" rel="stylesheet" />
+    <link href="css/Design för undersidor/sidor.css" rel="stylesheet" />
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=undo" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -59,14 +59,14 @@
             <h1>Hemsökta museet</h1>
         </span>
         <p>Historiska Röster utredde det hemsökta museet i Borås i augusti 2024.</p>
-        <img src="image/Hemsokta_museet.jpg" alt="Hemsökta museet i Borås" width="400">
+        <img src="image/hemsokta_museet/Hemsokta_museet.jpg" alt="Hemsökta museet i Borås" width="400">
         
     </header>
 
     <main>
         <h2>Hemsökta Museet</h2>
         <p>Hemsökta Museet i Borås är det ända hemsökta museet i Sverige och ägs av spökjägarna LaxTon Ghost Sweden. Museet är en unik och spännande upplevelse för alla som är intresserade av det övernaturliga. Beläget i Borås, erbjuder museet en plats där det förflutna möter det okända. Här får besökarna möjlighet att utforska en samling av föremål och berättelser, där många av dem sägs vara förknippade med spöklika och paranormala fenomen.</p>
-        <p>Museet är känt för sina guidade turer och temaevenemang som tar med besökare på en resa genom de olika förmål det har utställt. Från gamla föremål som tros bära på andar, till berättelser om hemsökta byggnader och mystiska händelser, erbjuder museet en fängslande inblick i de historier som inte alltid berättas i traditionella läroböcker.</p>
+        <p>Museet är känt för sina guidade turer och temaevenemang som tar med besökare på en resa genom de olika föremål det har utställt. Från gamla föremål som tros bära på andar, till berättelser om hemsökta byggnader och mystiska händelser, erbjuder museet en fängslande inblick i de historier som inte alltid berättas i traditionella läroböcker.</p>
         <p>Besökarna kan förvänta sig en atmosfär som blandar kulturarv med övernaturliga inslag, och museet är särskilt populärt bland dem som är intresserade av spökjakter, paranormala undersökningar och lokal folklore. Hemsökta Museet i Borås erbjuder en upplevelse för både skeptiker och troende.</p>
 
         <h2>Vad besökare sägs ha upplevt när de besökt det hemsökta museet</h2>
@@ -104,37 +104,18 @@
 
     <div id="footer-container"></div>
 
-<script>
-    fetch("footer.html")
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById("footer-container").innerHTML = data;
+    <script>
+        fetch("footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer-container").innerHTML = data;
 
-            // Lägg in JS-koden här eftersom footern nu finns i DOM
-            const feedbackIcon = document.getElementById("feedback-icon");
-            const feedbackPopup = document.getElementById("feedback-popup");
-            const closeBtn = document.getElementById("close-btn");
-
-            if (feedbackIcon && feedbackPopup && closeBtn) {
-                feedbackIcon.onclick = function () {
-                    feedbackPopup.style.display = "flex";
-                };
-
-                closeBtn.onclick = function () {
-                    feedbackPopup.style.display = "none";
-                };
-
-                window.onclick = function (event) {
-                    if (event.target === feedbackPopup) {
-                        feedbackPopup.style.display = "none";
-                    }
-                };
-            } else {
-                console.error("Ett eller flera element i feedback-popup kunde inte hittas.");
-            }
-        });
-</script>
-
-    <script src="main.js"></script>
+                // Ladda main.js EFTER att footern är i DOM:en
+                const script = document.createElement("script");
+                script.src = "main.js";
+                document.body.appendChild(script);
+            })
+            .catch(error => console.error("Fel vid inladdning av footer:", error));
+    </script>
 </body>
 </html>

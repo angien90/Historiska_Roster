@@ -8,7 +8,7 @@
     <meta name="keywords" content="Rankhyttans Herrgård, historiska platser, spökhistoria, paranormala fenomen, svenska sägner, historia, spökjakt">
     
     <link rel="canonical" href="https://historiskaroster.se/rankhyttans-herrgard">
-    <link href="css/Design för undersidor/rankhyttan.css" rel="stylesheet" />
+    <link href="css/Design för undersidor/sidor.css" rel="stylesheet" />
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -258,8 +258,6 @@
             </div>
         </span>
 
-
-
         <hr>
             
         <h2 class="summery">Sammanfattning från vår utredning</h2>
@@ -294,38 +292,18 @@
 
     <div id="footer-container"></div>
 
-<script>
-    fetch("footer.html")
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById("footer-container").innerHTML = data;
+    <script>
+        fetch("footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer-container").innerHTML = data;
 
-            // Lägg in JS-koden här eftersom footern nu finns i DOM
-            const feedbackIcon = document.getElementById("feedback-icon");
-            const feedbackPopup = document.getElementById("feedback-popup");
-            const closeBtn = document.getElementById("close-btn");
-
-            if (feedbackIcon && feedbackPopup && closeBtn) {
-                feedbackIcon.onclick = function () {
-                    feedbackPopup.style.display = "flex";
-                };
-
-                closeBtn.onclick = function () {
-                    feedbackPopup.style.display = "none";
-                };
-
-                window.onclick = function (event) {
-                    if (event.target === feedbackPopup) {
-                        feedbackPopup.style.display = "none";
-                    }
-                };
-            } else {
-                console.error("Ett eller flera element i feedback-popup kunde inte hittas.");
-            }
-        });
-</script>
-
-
-    <script src="main.js"></script>
+                // Ladda main.js EFTER att footern är i DOM:en
+                const script = document.createElement("script");
+                script.src = "main.js";
+                document.body.appendChild(script);
+            })
+            .catch(error => console.error("Fel vid inladdning av footer:", error));
+    </script>
 </body>
 </html>

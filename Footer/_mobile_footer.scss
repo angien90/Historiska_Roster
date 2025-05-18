@@ -76,17 +76,30 @@ a {
 }
 
 .popup-content p {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
+    margin-left: 10px;
+    margin-right: 10px;
     font-size: clamp(1.2em, 2vw, 1.2em);
     color: black;
 }
 
 .feedback-link {
+    display: inline-block;
     text-decoration: none;
-    color: black;
+    color: white;
+    background-color: black;
     font-weight: bold;
-    font-size: clamp(2em, 5vw, 2em);
-    padding-bottom: 30px;
+    font-size: clamp(1.2em, 5vw, 2em);
+    padding: 0.5em 1.2em;
+    border: 2px solid black;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.feedback-link:hover {
+    background-color: white;
+    color: black;
 }
 
 .close-btn {

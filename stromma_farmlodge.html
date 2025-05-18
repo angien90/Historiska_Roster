@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Strömma Farmlodge- Historiska Röster</title>
 
-    <link href="css/Design för undersidor/sonjas_veranda.css" rel="stylesheet" />
+    <link href="css/Design för undersidor/sidor.css" rel="stylesheet" />
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=undo" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -106,43 +106,25 @@
             <a href="https://digitaltmuseum.se/0210111491922/mansportratt-kyrkoherde-ernst-sjoblom">Källa 5</a><br>
             <a href="https://gw.geneanet.org/opp1951?n=andersson+gift+johansson&oc=&p=ester+linnea">Källa 6</a><br>
             <a href="https://www.geni.com/people/Ester-Linn%C3%A9a-Johansson/6000000178300549858">Källa 7</a><br>
-            <a hfref="#">Utdrag ur boken "Från Ottersjön till Utterås" av Jacob Bjärsdal och Ivar Larsson.</a><br>
+            <a href="#">Utdrag ur boken "Från Ottersjön till Utterås" av Jacob Bjärsdal och Ivar Larsson.</a><br>
             <a href="#">Boken "Tvååkergårdar" av Ivar Larsson (sidan 556)</a>
         </details>
     </main>
 
     <div id="footer-container"></div>
 
-<script>
-    fetch("footer.html")
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById("footer-container").innerHTML = data;
+    <script>
+        fetch("footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer-container").innerHTML = data;
 
-            // Lägg in JS-koden här eftersom footern nu finns i DOM
-            const feedbackIcon = document.getElementById("feedback-icon");
-            const feedbackPopup = document.getElementById("feedback-popup");
-            const closeBtn = document.getElementById("close-btn");
-
-            if (feedbackIcon && feedbackPopup && closeBtn) {
-                feedbackIcon.onclick = function () {
-                    feedbackPopup.style.display = "flex";
-                };
-
-                closeBtn.onclick = function () {
-                    feedbackPopup.style.display = "none";
-                };
-
-                window.onclick = function (event) {
-                    if (event.target === feedbackPopup) {
-                        feedbackPopup.style.display = "none";
-                    }
-                };
-            } else {
-                console.error("Ett eller flera element i feedback-popup kunde inte hittas.");
-            }
-        });
+                // Ladda main.js EFTER att footern är i DOM:en
+                const script = document.createElement("script");
+                script.src = "main.js";
+                document.body.appendChild(script);
+            })
+            .catch(error => console.error("Fel vid inladdning av footer:", error));
     </script>
-    <script src="main.js"></script>
 </body>
 </html>

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hotell Gästis- Historiska Röster</title>
 
-    <link href="css/Design för undersidor/frammegarden.css" rel="stylesheet" />
+    <link href="css/Design för undersidor/sidor.css" rel="stylesheet" />
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=undo" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -104,19 +104,10 @@
                 </div>
             </span>
 
-        <h2>Vad besökare har upplevt</h2>
-            <ul>
-                <li>...</li> 
-            </ul>
         <hr>
             
         <h2 class="summery">Sammanfattning från vår utredning</h2>
-            <h3>Kortfattat om vad vi fick uppleva</h3>
-                <p>...</p>
-
-        <article>      
-            <iframe width="300" height="315" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </article>  
+            <p>Kommer inom kort!</p>
     
         <hr>
 
@@ -141,38 +132,18 @@
 
     <div id="footer-container"></div>
 
-<script>
-    fetch("footer.html")
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById("footer-container").innerHTML = data;
+    <script>
+        fetch("footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer-container").innerHTML = data;
 
-            // Lägg in JS-koden här eftersom footern nu finns i DOM
-            const feedbackIcon = document.getElementById("feedback-icon");
-            const feedbackPopup = document.getElementById("feedback-popup");
-            const closeBtn = document.getElementById("close-btn");
-
-            if (feedbackIcon && feedbackPopup && closeBtn) {
-                feedbackIcon.onclick = function () {
-                    feedbackPopup.style.display = "flex";
-                };
-
-                closeBtn.onclick = function () {
-                    feedbackPopup.style.display = "none";
-                };
-
-                window.onclick = function (event) {
-                    if (event.target === feedbackPopup) {
-                        feedbackPopup.style.display = "none";
-                    }
-                };
-            } else {
-                console.error("Ett eller flera element i feedback-popup kunde inte hittas.");
-            }
-        });
-</script>
-
-
-    <script src="main.js"></script>
+                // Ladda main.js EFTER att footern är i DOM:en
+                const script = document.createElement("script");
+                script.src = "main.js";
+                document.body.appendChild(script);
+            })
+            .catch(error => console.error("Fel vid inladdning av footer:", error));
+    </script>
 </body>
 </html>
