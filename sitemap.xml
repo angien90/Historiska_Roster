@@ -13,6 +13,11 @@
   <priority>1.00</priority>
 </url>
 <url>
+  <loc>https://historiskaroster.se/index.html</loc>
+  <lastmod>2025-03-27T20:02:30+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
   <loc>https://historiskaroster.se/about_us.html</loc>
   <lastmod>2025-03-27T20:02:30+00:00</lastmod>
   <priority>0.80</priority>
@@ -63,10 +68,28 @@
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://historiskaroster.se/index.html</loc>
+  <loc>https://historiskaroster.se/asundsholms_herrgard.html</loc>
   <lastmod>2025-03-27T20:02:30+00:00</lastmod>
   <priority>0.64</priority>
 </url>
-
-
+<url>
+  <loc>https://historiskaroster.se/rydals_herrgard.html</loc>
+  <lastmod>2025-03-27T20:02:30+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://historiskaroster.se/jagarensgrav.html</loc>
+  <lastmod>2025-03-27T20:02:30+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://historiskaroster.se/falks_grav.html</loc>
+  <lastmod>2025-03-27T20:02:30+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://historiskaroster.se/barnmördarkorset.html</loc>
+  <lastmod>2025-03-27T20:02:30+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
 </urlset>
